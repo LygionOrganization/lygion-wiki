@@ -1,0 +1,139 @@
+site_name: Lygion Wiki
+site_description: Product documentation, developer guides, and open-source resources for LYgion Robotics.
+site_url: https://wiki.lygion.ai/
+
+repo_name: LygionRobotics/lygion-wiki
+repo_url: https://github.com/LygionRobotics/lygion-wiki
+
+theme:
+  name: material
+  language: zh
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    # - toc.integrate
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: zh
+          name: 简体中文
+          default: true
+          build: true
+          nav:
+            - 首页: index.md
+            - 快速开始: getting-started.md
+
+            - 总线设备:
+                - bus-devices/index.md
+                - TTL Adapter (A): bus-devices/ttl-adapter-a.md
+                - TTL Encoder E02: bus-devices/ttl-encoder-e02.md
+                - TTL Stepper Driver (A): bus-devices/ttl-stepper-driver-a.md
+                - TTL Node (A): bus-devices/ttl-node-a.md
+                - Robot Driver with ESP32S3 Lite: bus-devices/robot-driver-with-esp32s3-lite.md
+                
+                - 分线板:
+                  - TTL-5264 8P Hub (A): bus-devices/ttl-5264-8p-hub-a.md
+                  - HC-1.25 8P Hub (A): bus-devices/hc-1.25-8p-hub-a.md
+
+                - 总线舵机:
+                  - SC-0090-C043: bus-devices/sc-0090-c043.md
+                  - SC-0090-C049: bus-devices/sc-0090-c049.md
+                  - SCS15-C023: bus-devices/sc15-c023.md
+                  - SCS15-C024: bus-devices/sc15-c024.md
+
+            - 机器人相关模组:
+                - robot-modules/index.md
+                - SW69-TTL: robot-modules/sw69-ttl.md
+                - DM42-G7220-E02: robot-modules/dm42-g7220-e02.md
+                - DW69: robot-modules/dw69.md
+                - SP3M72-E02: robot-modules/sp3m72-e02.md
+
+            - 机器人整机:
+                - robots/index.md
+                - LinkArm-M: robots/linkarm-m.md
+                - LinkArm-LT: robots/linkarm-lt.md
+
+            - 灵影开源:
+                - open-source/index.md
+
+        - locale: en
+          name: English
+          build: true
+          nav:
+            - Home: index.md
+            - Getting Started: getting-started.md
+
+            - Bus Devices:
+                - bus-devices/index.md
+                - TTL Encoder E02: bus-devices/ttl-encoder-e02.md
+                - TTL Stepper Driver (A): bus-devices/ttl-stepper-driver-a.md
+                - TTL Node (A): bus-devices/ttl-node-a.md
+                - Robot Driver with ESP32S3 Lite: bus-devices/robot-driver-with-esp32s3-lite.md
+                - TTL-5264 8P Hub (A): bus-devices/ttl-5264-8p-hub-a.md
+                - HC-1.25 8P Hub (A): bus-devices/hc-1.25-8p-hub-a.md
+
+                - Bus Servos:
+                  - SC-0090-C043: bus-devices/sc-0090-c043.md
+                  - SC-0090-C049: bus-devices/sc-0090-c049.md
+                  - SCS15-C023: bus-devices/sc15-c023.md
+                  - SCS15-C024: bus-devices/sc15-c024.md
+
+            - Robot Modules:
+                - robot-modules/index.md
+                - DM42-G7220-E02: robot-modules/dm42-g7220-e02.md
+
+            - Robots:
+                - robots/index.md
+
+            - Lygion Open Source:
+                - open-source/index.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+extra_css:
+  - stylesheets/extra.css

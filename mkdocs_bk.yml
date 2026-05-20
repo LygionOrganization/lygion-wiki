@@ -1,0 +1,92 @@
+site_name: Lygion Wiki
+site_description: Product documentation, developer guides, and open-source resources for LYgion Robotics.
+site_url: https://wiki.lygion.ai/
+
+repo_name: LygionRobotics/lygion-wiki
+repo_url: https://github.com/LygionRobotics/lygion-wiki
+
+theme:
+  name: material
+  language: zh
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 首页: index.md
+  - 快速开始: getting-started.md
+
+  - 总线设备:
+      - bus-devices/index.md
+      - TTL Encoder E02: bus-devices/ttl-encoder-e02.md
+      - TTL Stepper Driver (A): bus-devices/ttl-stepper-driver-a.md
+      - TTL Node (A): bus-devices/ttl-node-a.md
+      # - Robot Driver with ESP32S3 Lite: bus-devices/robot-driver-esp32s3-lite.md
+
+  - 机器人相关模组:
+      - robot-modules/index.md
+      - DM42-G7220-E02: robot-modules/dm42-g7220-e02.md
+      # - SP3M72-E02: robot-modules/sp3m72-e02.md
+      # - DW69 驱动轮模组: robot-modules/dw69-drive-wheel.md
+      # - SW69-TTL 舵轮模组: robot-modules/sw69-ttl.md
+
+  - 机器人整机:
+      - robots/index.md
+      # - LinkArm LT: robots/linkarm-lt.md
+      # - 两轮平衡车: robots/balance-bot.md
+      # - 四驱底盘: robots/four-wheel-chassis.md
+      # - 四驱四转全向底盘: robots/four-steer-omni-chassis.md
+
+  - 灵影开源:
+      - open-source/index.md
+      # - Python SDK: open-source/python-sdk.md
+      # - C++ SDK: open-source/cpp-sdk.md
+      # - ROS2 示例: open-source/ros2.md
+      # - AI Agent / CLI 控制: open-source/ai-agent-cli.md
+
+  # - 下载中心: downloads/index.md
+  # - 常见问题: faq/index.md
