@@ -17,3 +17,7 @@ This repository is built with [MkDocs](https://www.mkdocs.org/) and is intended 
 - Python / C++ SDKs and example programs
 - Wiring, communication protocols, and configuration guides
 - Product tutorials, FAQs, and troubleshooting notes
+
+## Website
+
+https://lygion.ai
