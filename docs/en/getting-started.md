@@ -63,9 +63,9 @@ Some low-power devices or a single device may allow basic operations such as rea
 
 ### 2.2 Control from an MCU UART
 
-If you are using ESP32, STM32, or another embedded controller, you can connect the MCU UART to TTL Adapter (A).
+If you are using ESP32, STM32, or another embedded controller, you can connect the MCU UART to [TTL Adapter (A)](bus-devices/ttl-adapter-a.md).
 
-TTL Adapter (A) converts the MCU's two-wire UART signal into the single-wire TTL bus signal used by Lygion TTL bus devices and compatible TTL bus servos.
+The TTL Adapter (A) converts the MCU’s **dual-wire UART** signals into a **single-wire TTL bus signal**, allowing control of Lygion TTL bus devices or compatible TTL bus servos.
 
 Typical connection:
 
@@ -73,8 +73,8 @@ Typical connection:
 
 | TTL Adapter (A) | MCU |
 | --- | --- |
-| TX | RX |
-| RX | TX |
+| RX | RX |
+| TX | TX |
 | GND | GND |
 
 The UART interface of TTL Adapter (A) uses **3.3V TTL logic level**.
@@ -83,6 +83,13 @@ The UART interface of TTL Adapter (A) uses **3.3V TTL logic level**.
     The UART interface of TTL Adapter (A) is 3.3V.
 
     If your MCU uses 5V UART logic, make sure its IO pins are compatible with 3.3V input. If necessary, add a level shifting circuit.
+
+!!! tip "MCU-to-TTL Adapter wiring"
+    - Connect MCU RX → TTL Adapter (A) RX
+    
+    - Connect MCU TX → TTL Adapter (A) TX
+    
+    - Connect MCU GND → TTL Adapter (A) GND
 
 ---
 
@@ -582,12 +589,12 @@ Serial1.begin(1000000);
 
 If only the baud rate is specified, the board uses its default UART pins. These default pins may not be connected to TTL Adapter (A), which can make the program appear to run normally while the device does not respond.
 
-!!! tip "Check RX/TX crossover"
-    MCU TX should connect to TTL Adapter (A) RX.
-
-    MCU RX should connect to TTL Adapter (A) TX.
-
-    GND must connect to GND.
+!!! tip "MCU-to-TTL Adapter wiring"
+    - Connect MCU RX → TTL Adapter (A) RX
+    
+    - Connect MCU TX → TTL Adapter (A) TX
+    
+    - Connect MCU GND → TTL Adapter (A) GND
 
 ---
 

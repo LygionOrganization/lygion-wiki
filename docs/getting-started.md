@@ -58,9 +58,9 @@ TTL Bus Device(s)
 
 ### 2.2 使用 MCU UART 控制
 
-如果您使用 ESP32、STM32 或其他嵌入式控制器，可以通过 MCU 的 UART 接口连接 TTL Adapter (A)。
+如果您使用 ESP32、STM32 或其他嵌入式控制器，可以通过 MCU 的 UART 接口连接 [TTL Adapter (A)](bus-devices/ttl-adapter-a.md)。
 
-TTL Adapter (A) 可以将 MCU 的双线 UART 信号转换为单线 TTL 总线信号，从而控制 LYgion TTL 总线设备或兼容的 TTL 总线舵机。
+TTL Adapter (A) 会将 MCU 的双线 UART 信号转换为单线 TTL 总线信号，从而控制 LYgion TTL 总线设备或兼容的 TTL 总线舵机。
 
 典型连接方式如下：
 
@@ -68,8 +68,8 @@ TTL Adapter (A) 可以将 MCU 的双线 UART 信号转换为单线 TTL 总线信
 
 | TTL Adapter (A) | MCU |
 | --- | --- |
-| TX | RX |
-| RX | TX |
+| RX | RX |
+| TX | TX |
 | GND |	GND |
 
 TTL Adapter (A) 的 UART 通信电平为 3.3V TTL。
@@ -78,6 +78,13 @@ TTL Adapter (A) 的 UART 通信电平为 3.3V TTL。
     TTL Adapter (A) 的 UART 接口为 3.3V 电平。
 
     如果您的 MCU 或控制器使用 5V UART 电平，请确认其 IO 是否兼容 3.3V 输入，必要时需要增加电平转换电路。
+
+!!! tip "MCU 与 TTL Adapter 接线方式"
+    MCU 的 RX 应连接到 TTL Adapter (A) 的 RX。
+    
+    MCU 的 TX 应连接到 TTL Adapter (A) 的 TX。
+    
+    GND 必须连接到 GND。
 
 ## 3. 供电方式
 
@@ -569,11 +576,11 @@ Serial1.begin(1000000);
 
 因为只写波特率时，开发板会使用默认 UART 引脚。默认引脚不一定连接到了 TTL Adapter (A)，可能导致程序运行正常但设备没有响应。
 
-!!! tip "确认 RX/TX 是否交叉连接"
-    MCU 的 TX 应连接到 TTL Adapter (A) 的 RX。
-
-    MCU 的 RX 应连接到 TTL Adapter (A) 的 TX。
-
+!!! tip "MCU 与 TTL Adapter 接线方式"
+    MCU 的 RX 应连接到 TTL Adapter (A) 的 RX。
+    
+    MCU 的 TX 应连接到 TTL Adapter (A) 的 TX。
+    
     GND 必须连接到 GND。
 
 ## 9. 常见问题排查
