@@ -16,7 +16,6 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.footer
-    # - toc.integrate
     - toc.follow
     - search.suggest
     - search.highlight
@@ -95,12 +94,15 @@ plugins:
 
             - Bus Devices:
                 - bus-devices/index.md
+                - TTL Adapter (A): bus-devices/ttl-adapter-a.md
                 - TTL Encoder E02: bus-devices/ttl-encoder-e02.md
                 - TTL Stepper Driver (A): bus-devices/ttl-stepper-driver-a.md
                 - TTL Node (A): bus-devices/ttl-node-a.md
                 - Robot Driver with ESP32S3 Lite: bus-devices/robot-driver-with-esp32s3-lite.md
-                - TTL-5264 8P Hub (A): bus-devices/ttl-5264-8p-hub-a.md
-                - HC-1.25 8P Hub (A): bus-devices/hc-1.25-8p-hub-a.md
+
+                - Hub Boards:
+                  - TTL-5264 8P Hub (A): bus-devices/ttl-5264-8p-hub-a.md
+                  - HC-1.25 8P Hub (A): bus-devices/hc-1.25-8p-hub-a.md
 
                 - Bus Servos:
                   - SC-0090-C043: bus-devices/sc-0090-c043.md
