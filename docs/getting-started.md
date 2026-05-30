@@ -23,7 +23,7 @@
 
 ## 2. 接线方式
 
-LYgion TTL 总线设备可以通过 PC / SBC 上位机控制，也可以通过 ESP32、STM32 等嵌入式控制器控制。
+Lygion TTL 总线设备可以通过 PC / SBC 上位机控制，也可以通过 ESP32、STM32 等嵌入式控制器控制。
 
 ### 2.1 使用 PC / SBC 通过 USB 控制
 

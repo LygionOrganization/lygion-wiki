@@ -1,5 +1,11 @@
 # TTL Adapter (A)
 
+<div class="ly-lang-switch">
+  <div class="ly-lang-switch__buttons">
+    <a class="ly-lang-switch__button" href="/en/bus-devices/ttl-adapter-a">🌐English</a>
+  </div>
+</div>
+
 ![TTL Adapter (A) Step](assets/images/ttla04.png){ .img-rounded width="300" }
 
 > 面向机器人与嵌入式系统的 TTL 总线设备驱动器
