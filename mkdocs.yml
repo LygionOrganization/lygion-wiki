@@ -1,27 +1,27 @@
 site_name: Lygion Wiki
-site_description: Product documentation, developer guides, and open-source resources for LYgion Robotics.
+site_description: Product documentation, tutorials, reference guides, and open-source resources for Lygion Robotics.
 site_url: https://wiki.lygion.ai/
 
 repo_name: LygionRobotics/lygion-wiki
 repo_url: https://github.com/LygionRobotics/lygion-wiki
+edit_uri: blob/main/docs/
 
 theme:
   name: material
   language: zh
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
-
   features:
     - navigation.sections
     - navigation.indexes
     - navigation.top
     - navigation.footer
+    - navigation.path
     - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.tabs.link
-
   palette:
     - scheme: default
       primary: indigo
@@ -50,75 +50,65 @@ plugins:
           build: true
           nav:
             - 首页: index.md
-            - 快速开始: getting-started.md
-
-            - 总线设备:
-                - bus-devices/index.md
-                - TTL Adapter (A): bus-devices/ttl-adapter-a.md
-                - TTL Encoder E02: bus-devices/ttl-encoder-e02.md
-                - TTL Stepper Driver (A): bus-devices/ttl-stepper-driver-a.md
-                - TTL Node (A): bus-devices/ttl-node-a.md
-                - Robot Driver with ESP32S3 Lite: bus-devices/robot-driver-with-esp32s3-lite.md
-                
-                - 分线板:
-                  - TTL-5264 8P Hub (A): bus-devices/ttl-5264-8p-hub-a.md
-                  - HC-1.25 8P Hub (A): bus-devices/hc-1.25-8p-hub-a.md
-
-                - 总线舵机:
-                  - SC-0090-C043: bus-devices/sc-0090-c043.md
-                  - SC-0090-C049: bus-devices/sc-0090-c049.md
-                  - SCS15-C023: bus-devices/sc15-c023.md
-                  - SCS15-C024: bus-devices/sc15-c024.md
-
-            - 机器人相关模组:
-                - robot-modules/index.md
-                - SW69-TTL: robot-modules/sw69-ttl.md
-                - DM42-G7220-E02: robot-modules/dm42-g7220-e02.md
-                - DW69: robot-modules/dw69.md
-                - SP3M72-E02: robot-modules/sp3m72-e02.md
-
-            - 机器人整机:
-                - robots/index.md
-                - LinkArm-M: robots/linkarm-m.md
-                - LinkArm-LT: robots/linkarm-lt.md
-
-            - 灵影开源:
-                - open-source/index.md
-
+            - 快速开始:
+                - quickstart/index.md
+                - Python 路线：快速开始: quickstart/python-first-demo.md
+                - C++ 路线：快速开始: quickstart/cpp-first-demo.md
+            - 基础教程:
+                - tutorials/index.md
+                - 命令行与 Python:
+                    - 如何打开终端 / CMD / PowerShell: tutorials/open-terminal.md
+                    - 安装 Python: tutorials/install-python.md
+                    - 查找串口设备: tutorials/find-serial-port.md
+                    - 运行 Python 脚本: tutorials/run-python-scripts.md
+                - MCU C++:
+                    - 安装 Arduino IDE: tutorials/install-arduino-ide.md
+                    - 安装 PlatformIO: tutorials/install-platformio.md
+                    - MCU UART 接线基础: tutorials/mcu-uart-wiring.md
+                    - 上传 Arduino 示例程序: tutorials/upload-arduino-sketch.md
+                    - 打开串口监视器: tutorials/serial-monitor.md
+                - 总线设备基础:
+                    - 安装 USB 串口驱动: tutorials/install-usb-serial-driver.md
+                    - 设备 ID 与波特率: tutorials/device-id-and-baudrate.md
+                    - 供电与接线基础: tutorials/power-and-wiring-basics.md
+                    - 常见通信问题排查: tutorials/communication-troubleshooting.md
+                    - FD 调试软件: tutorials/fd-tool.md
+            - 产品参考:
+                - reference/index.md
+                - 总线设备:
+                    - reference/bus-devices/index.md
+                    - TTL Adapter (A):
+                        - reference/bus-devices/ttl-adapter-a/index.md
+                        - 硬件概览: reference/bus-devices/ttl-adapter-a/hardware-overview.md
+                        - 供电与接线: reference/bus-devices/ttl-adapter-a/power-and-wiring.md
+                        - 驱动与串口: reference/bus-devices/ttl-adapter-a/drivers-and-ports.md
+                        - SDK 与工具: reference/bus-devices/ttl-adapter-a/sdk-and-tools.md
+                    - TTL Encoder E02:
+                        - reference/bus-devices/ttl-encoder-e02/index.md
+                        - 硬件安装: reference/bus-devices/ttl-encoder-e02/hardware-installation.md
+                        - Python 读取: reference/bus-devices/ttl-encoder-e02/python-quickstart.md
+                        - C++ / Arduino: reference/bus-devices/ttl-encoder-e02/cpp-arduino.md
+                        - 校准与多圈: reference/bus-devices/ttl-encoder-e02/calibration-and-multiturn.md
+                        - FAQ: reference/bus-devices/ttl-encoder-e02/faq.md
+                    - TTL Stepper Driver (A):
+                        - reference/bus-devices/ttl-stepper-driver-a/index.md
+                        - 硬件接线: reference/bus-devices/ttl-stepper-driver-a/hardware-wiring.md
+                        - 运行模式: reference/bus-devices/ttl-stepper-driver-a/operating-modes.md
+                        - 参数说明: reference/bus-devices/ttl-stepper-driver-a/parameters.md
+                        - Python 控制: reference/bus-devices/ttl-stepper-driver-a/python-quickstart.md
+                        - C++ / Arduino: reference/bus-devices/ttl-stepper-driver-a/cpp-arduino.md
+                        - 限位、回零与心跳保护: reference/bus-devices/ttl-stepper-driver-a/limits-homing-heartbeat.md
+                        - FAQ: reference/bus-devices/ttl-stepper-driver-a/faq.md
+            - 下载中心: downloads/index.md
         - locale: en
           name: English
           build: true
           nav:
             - Home: index.md
-            - Getting Started: getting-started.md
-
-            - Bus Devices:
-                - bus-devices/index.md
-                - TTL Adapter (A): bus-devices/ttl-adapter-a.md
-                - TTL Encoder E02: bus-devices/ttl-encoder-e02.md
-                - TTL Stepper Driver (A): bus-devices/ttl-stepper-driver-a.md
-                - TTL Node (A): bus-devices/ttl-node-a.md
-                - Robot Driver with ESP32S3 Lite: bus-devices/robot-driver-with-esp32s3-lite.md
-
-                - Hub Boards:
-                  - TTL-5264 8P Hub (A): bus-devices/ttl-5264-8p-hub-a.md
-                  - HC-1.25 8P Hub (A): bus-devices/hc-1.25-8p-hub-a.md
-
-                - Bus Servos:
-                  - SC-0090-C043: bus-devices/sc-0090-c043.md
-                  - SC-0090-C049: bus-devices/sc-0090-c049.md
-                  - SCS15-C023: bus-devices/sc15-c023.md
-                  - SCS15-C024: bus-devices/sc15-c024.md
-
-            - Robot Modules:
-                - robot-modules/index.md
-                - DM42-G7220-E02: robot-modules/dm42-g7220-e02.md
-
-            - Robots:
-                - robots/index.md
-
-            - Lygion Open Source:
-                - open-source/index.md
+            - Quick Start: quickstart/index.md
+            - Tutorials: tutorials/index.md
+            - Reference: reference/index.md
+            - Downloads: downloads/index.md
 
 markdown_extensions:
   - admonition
@@ -132,10 +122,21 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      check_paths: true
+      url_download: false
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
 
 extra_css:
   - stylesheets/extra.css
