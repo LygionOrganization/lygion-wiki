@@ -20,13 +20,11 @@ Stepper Motor
 ## 上电前检查
 
 - 电源电压是否在 DC 9~26V 范围内。
-- 步进电机线序是否正确。
+- 步进电机接口线序是否正确。
 - TTL 总线的 `+ / - / S` 是否接线正确。
 - 总线上是否存在重复 ID。
-- 限位开关是否接到正确接口。
-- EDS 同步接口是否方向正确。
 
-![TTL Stepper Driver (A) Basic Parameters](../../../assets/images/ttlsd-02-cn.png){ .img-rounded }
+![TTL Stepper Driver (A) Basic Parameters](assets/ttlsd-02-cn.png){ .img-rounded }
 
 ## 电源
 
@@ -35,7 +33,6 @@ TTL Stepper Driver (A) 驱动电机时必须接入外部电源。不要只依赖
 | 项目 | 参数 |
 | --- | --- |
 | 输入电压 | DC 9~26V |
-| 电流设置 | 设置的是电机相电流，不是电源输入电流 |
 
 ## 步进电机接口
 
@@ -43,18 +40,22 @@ TTL Stepper Driver (A) 驱动电机时必须接入外部电源。不要只依赖
 
 ## TTL 总线接口
 
-TTL 总线可连接：
+5264-3P 可以连接：
 
-- TTL Adapter (A)
-- TTL Encoder E02
-- Feetech TTL 总线舵机
-- 其它 Lygion TTL 总线设备
+- [TTL Adapter (A)](../../../reference/bus-devices/ttl-adapter-a/index.md)
+- [TTL-5264 8P Hub (A)](../../../reference/bus-devices/hub-boards/ttl-5264-8p-hub-a.md)
 
-同一总线所有设备 ID 必须不同。
+HC1.25-3P 可以连接
+- [TTL Encoder E02](../../../reference/bus-devices/ttl-encoder-e02/index.md)
+
+!!! note "连接编码器"
+    步进电机驱动板板载接口用于连接编码器，仅用于布线方便，将编码器并入到 TTL 总线使用。
+    
+    步进电机驱动板并不会读取编码器数据，所以编码器和步进电机驱动板的 ID 不可以相同。
 
 ## 限位接口
 
-TTL Stepper Driver (A) 提供 MIN 和 LIMIT 两个限位接口。详细逻辑见：[限位、回零与心跳保护](limits-homing-heartbeat.md)。
+TTL Stepper Driver (A) 提供 `MIN` 和 `LIMIT` 两个限位接口。详细逻辑见：[限位、回零与心跳保护](limits-homing-heartbeat.md)。
 
 ## EDS 同步接口
 
@@ -66,4 +67,4 @@ EDS 同步接口用于从动同步模式，连接方向为：
 ```
 
 !!! warning "EDS 方向不能接反"
-    从动同步模式依赖接口方向，接反后从设备无法正确跟随主设备。
+    从动同步模式对信号传输方向敏感，接反后从设备无法正确跟随主设备。

@@ -4,7 +4,7 @@ TTL Adapter (A) 集成 USB、UART、单线 TTL 总线和外部供电接口。
 
 ## 板载资源
 
-![Board Resources](../../../assets/images/ttla02.png){ .img-rounded width="600" }
+![Board Resources](assets/ttla02.png){ .img-rounded width="600" }
 
 | 编号 | 资源 | 用途 |
 | --- | --- | --- |
@@ -17,7 +17,7 @@ TTL Adapter (A) 集成 USB、UART、单线 TTL 总线和外部供电接口。
 
 ## 尺寸
 
-![Product Dimensions](../../../assets/images/ttla01.png){ .img-rounded width="360" }
+![Product Dimensions](assets/ttla01.png){ .img-rounded width="360" }
 
 | 项目 | 参数 |
 | --- | --- |
@@ -28,4 +28,4 @@ TTL Adapter (A) 集成 USB、UART、单线 TTL 总线和外部供电接口。
 
 ## STEP 模型
 
-[TTL Adapter (A) STEP](../../../assets/files/ttl-adapter-a.step)
+[TTL Adapter (A) STEP](assets/ttl-adapter-a.step)

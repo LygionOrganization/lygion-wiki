@@ -10,7 +10,7 @@ TTL Encoder E02 与 TTL Stepper Driver (A) 复用了部分 SDK 接口。对于�
 - [查找串口设备](../../../tutorials/find-serial-port.md)
 - [运行 Python 脚本](../../../tutorials/run-python-scripts.md)
 
-## 公共初始化结构
+## 通用初始化结构
 
 ```python
 import sys
@@ -110,6 +110,12 @@ result, error = packetHandler.reOfsCal(1, 1024)
 1024 = 90°
 2048 = 180°
 3072 = 270°
+```
+
+换算公式：
+
+```
+position = angle_deg * 4096 / 360
 ```
 
 校准结果会掉电保存。

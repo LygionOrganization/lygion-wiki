@@ -2,7 +2,7 @@
 
 TTL Stepper Driver (A) 是一款基于单线 TTL 总线通信的双极步进电机驱动板。它可以让普通两相步进电机像总线舵机一样被控制：上位机或 MCU 只需要发送位置、速度、电流等指令，驱动板完成底层步进驱动、加减速、反馈和保护逻辑。
 
-![TTL Stepper Driver (A)](../../../assets/images/ttlsd-01.png){ .img-rounded width="360" }
+![TTL Stepper Driver (A)](assets/ttlsd-01.png){ .img-rounded width="360" }
 
 ## 主要功能
 
@@ -42,9 +42,8 @@ TTL Stepper Driver (A) 是一款基于单线 TTL 总线通信的双极步进电�
 
 建议先完成：
 
-1. [跑通第一个 Demo](../../../quickstart/first-demo.md)
-2. [硬件接线](hardware-wiring.md)
-3. [Python 控制](python-quickstart.md)
+- [快速上手](../../../quickstart/index.md)
+- [查找串口设备](../../../tutorials/find-serial-port.md)
 
 !!! warning "第一次测试请使用保守参数"
     示例中的速度和加速度可能只是演示值。实际项目中建议从较低速度、非 0 加速度和合适电流开始测试。

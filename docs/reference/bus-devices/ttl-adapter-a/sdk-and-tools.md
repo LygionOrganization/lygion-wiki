@@ -22,21 +22,27 @@ FD 软件适合用于：
 - TTL Stepper Driver (A)
 - 后续 Lygion TTL 总线设备
 
-下载入口：
+- [Github (Python SDK)](https://github.com/LygionOrganization/lygion_devs_py)
 
-- [Python SDK](../../../downloads/index.md#python-sdk)
+如果你无法访问 Github，也可以从本站下载，下载入口：
+
+- [Python SDK](../../../assets/files/lygion_devs_py.zip)
 
 ## Lygion C++ / Arduino SDK
 
 适合 ESP32S3、ESP32、Arduino Mega2560、STM32 Arduino Core 等 MCU。
 
-下载入口：
+- [Github (C++ SDK)](https://github.com/LygionOrganization/lygion_devs_cpp)
 
-- [C++ / Arduino SDK](../../../downloads/index.md#c--arduino-sdk)
+如果你无法访问 Github，也可以从本站下载，下载入口：
+
+- [C++ / Arduino SDK](../../../assets/files/lygion_devs_cpp.zip)
 
 ## Feetech SDK
 
 当你控制飞特 STS / HLS / SCS 系列总线舵机时，可使用飞特官方 SDK。
+
+- [Gitee 主页](https://gitee.com/ftservo/)
 
 !!! tip "同一根总线可以混合设备"
     Lygion TTL 总线设备可以与兼容的飞特 TTL 总线舵机接入同一根总线，但所有设备的 ID 必须不同，波特率需要一致，供电电压也必须兼容。

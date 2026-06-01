@@ -2,7 +2,7 @@
 
 TTL Encoder E02 是一款基于单线 TTL 总线通信的 12bit 绝对角度磁编码器，可用于读取机械结构的角度和速度反馈。
 
-![TTL Encoder E02](../../../assets/images/ttle02-01.png){ .img-rounded width="360" }
+![TTL Encoder E02](assets/ttle02-01.png){ .img-rounded width="360" }
 
 ## 适用场景
 
@@ -11,7 +11,7 @@ TTL Encoder E02 是一款基于单线 TTL 总线通信的 12bit 绝对角度磁�
 - 齿轮、同步轮或减速器输出轴角度检测
 - 转台角度读取
 - 轮式底盘转向机构反馈
-- Leader-Follower 或低成本闭环系统
+- 机械臂 Leader-Follower 或低成本闭环系统
 
 ## 主要参数
 
@@ -39,6 +39,5 @@ TTL Encoder E02 是一款基于单线 TTL 总线通信的 12bit 绝对角度磁�
 
 第一次使用建议先完成：
 
-1. [跑通第一个 Demo](../../../quickstart/first-demo.md)
-2. [查找串口设备](../../../tutorials/find-serial-port.md)
-3. [Python 读取编码器](python-quickstart.md)
+- [快速上手](../../../quickstart/index.md)
+- [查找串口设备](../../../tutorials/find-serial-port.md)

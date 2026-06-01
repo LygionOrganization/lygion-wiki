@@ -51,4 +51,7 @@ TTL Adapter (A) 的 UART 接口可连接 ESP32、STM32、Arduino 等 MCU。
 - 多个大扭矩舵机或步进驱动器同时工作。
 - 总线距离较长，压降明显。
 
-更多通用说明见：[供电与接线基础](../../../tutorials/power-and-wiring-basics.md)。
+更多通用说明见：
+
+- [供电与接线基础](../../../tutorials/power-and-wiring-basics.md)
+- [分组供电/供电解耦教程](../../../tutorials/power-grouping-and-decoupling.md)

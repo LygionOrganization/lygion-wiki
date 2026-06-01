@@ -4,7 +4,11 @@ TTL Stepper Driver (A) 可通过 C++ / Arduino SDK 在 ESP32S3、ESP32、Arduino
 
 ## 获取 SDK
 
-- [C++ / Arduino SDK](../../../downloads/index.md#c--arduino-sdk)
+- [Github (C++ SDK)](https://github.com/LygionOrganization/lygion_devs_cpp)
+
+如果你无法访问 Github，也可以从本站下载，下载入口：
+
+- [C++ / Arduino SDK](../../../assets/files/lygion_devs_cpp.zip)
 
 ## 串口初始化
 

@@ -45,11 +45,36 @@ Windows 用户通常可以使用 FD 调试软件扫描设备、修改 ID 和波�
 
 部分产品支持通过 SDK 修改 ID，例如：
 
+### Python SDK
+
+[lygion_devs_py/lyttlsd/ttlsd_eprom.py](https://github.com/LygionOrganization/lygion_devs_py/blob/main/lyttlsd/ttlsd_eprom.py)
+
 ```python
-packetHandler.TorqueEn(1, 0)
+# 打开 EPROM 保存功能，参数 254 是广播 ID
 packetHandler.unLockEprom(1)
-packetHandler.SetID(1, 2)
-packetHandler.LockEprom(2)
+
+# 参数 2 是你要更改的新 ID
+packetHandler.SetID(254, 1)
+
+# 关闭 EPROM 保存功能，因为刚刚设备的 ID 已经被改为了 1
+# 所以这里关闭 EPROM 保存功能要输入新的 ID 1
+packetHandler.unLockEprom(1)
+```
+
+### C++ SDK
+
+[lygion_devs_cpp/lyttlsd/ProgramEprom](https://github.com/LygionOrganization/lygion_devs_cpp/blob/main/example/lyttlsd/ProgramEprom/ProgramEprom.ino)
+
+```cpp
+// 打开 EPROM 保存功能，参数 254 是广播 ID
+hlscl.unLockEprom(254);
+
+// 参数 2 是你要更改的新 ID
+hlscl.writeByte(254, HLSCL_ID, 1);
+
+// 关闭 EPROM 保存功能，因为刚刚设备的 ID 已经被改为了 1
+// 所以这里关闭 EPROM 保存功能要输入新的 ID 1
+hlscl.LockEprom(1);
 ```
 
 !!! warning "修改 ID 前只连接一个目标设备"

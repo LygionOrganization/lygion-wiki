@@ -44,7 +44,11 @@ STM32 需要安装对应的 STM32 Arduino Core。不同开发板差异较大，�
 
 下载 C++ SDK：
 
-- [C++ SDK 下载](../downloads/index.md#c-sdk)
+- [Github (C++ SDK)](https://github.com/LygionOrganization/lygion_devs_cpp)
+
+如果你无法访问 Github，也可以从本站下载，下载入口：
+
+- [C++ / Arduino SDK](../assets/files/lygion_devs_cpp.zip)
 
 将库文件复制到 Arduino 的 libraries 目录。常见路径：
 

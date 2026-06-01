@@ -28,13 +28,13 @@ theme:
       accent: blue
       toggle:
         icon: material/weather-night
-        name: 切换到深色模式
+        name: Switch to dark mode
     - scheme: slate
       primary: indigo
       accent: blue
       toggle:
         icon: material/weather-sunny
-        name: 切换到浅色模式
+        name: Switch to light mode
 
 plugins:
   - search:
@@ -52,28 +52,29 @@ plugins:
             - 首页: index.md
             - 快速开始:
                 - quickstart/index.md
-                - Python 路线：快速开始: quickstart/python-first-demo.md
-                - C++ 路线：快速开始: quickstart/cpp-first-demo.md
+                - 快速上手（Python）: quickstart/python-first-demo.md
+                - 快速上手（C++ / Arduino）: quickstart/cpp-first-demo.md
             - 基础教程:
                 - tutorials/index.md
-                - 命令行与 Python:
+                - 电脑和开发板（Python）:
+                    - 安装 USB 串口驱动: tutorials/install-usb-serial-driver.md
                     - 如何打开终端 / CMD / PowerShell: tutorials/open-terminal.md
                     - 安装 Python: tutorials/install-python.md
                     - 查找串口设备: tutorials/find-serial-port.md
                     - 运行 Python 脚本: tutorials/run-python-scripts.md
-                - MCU C++:
+                - 嵌入式设备（C++）:
                     - 安装 Arduino IDE: tutorials/install-arduino-ide.md
                     - 安装 PlatformIO: tutorials/install-platformio.md
                     - MCU UART 接线基础: tutorials/mcu-uart-wiring.md
                     - 上传 Arduino 示例程序: tutorials/upload-arduino-sketch.md
                     - 打开串口监视器: tutorials/serial-monitor.md
                 - 总线设备基础:
-                    - 安装 USB 串口驱动: tutorials/install-usb-serial-driver.md
                     - 设备 ID 与波特率: tutorials/device-id-and-baudrate.md
                     - 供电与接线基础: tutorials/power-and-wiring-basics.md
+                    - 分组供电和供电解耦: tutorials/power-grouping-and-decoupling.md
                     - 常见通信问题排查: tutorials/communication-troubleshooting.md
                     - FD 调试软件: tutorials/fd-tool.md
-            - 产品参考:
+            - 产品 Wiki:
                 - reference/index.md
                 - 总线设备:
                     - reference/bus-devices/index.md
@@ -99,6 +100,19 @@ plugins:
                         - C++ / Arduino: reference/bus-devices/ttl-stepper-driver-a/cpp-arduino.md
                         - 限位、回零与心跳保护: reference/bus-devices/ttl-stepper-driver-a/limits-homing-heartbeat.md
                         - FAQ: reference/bus-devices/ttl-stepper-driver-a/faq.md
+                    - Robot Driver with ESP32S3 Lite:
+                        - reference/bus-devices/robot-driver-with-esp32s3-lite/index.md
+                        - 板载资源介绍: reference/bus-devices/robot-driver-with-esp32s3-lite/board-resources.md
+                        - 初次使用教程: reference/bus-devices/robot-driver-with-esp32s3-lite/quickstart.md
+                        - 动作脚本编排: reference/bus-devices/robot-driver-with-esp32s3-lite/action-scripting.md
+                        - JSON 指令交互: reference/bus-devices/robot-driver-with-esp32s3-lite/json-command-interaction.md
+                        - USB CDC 有线通信: reference/bus-devices/robot-driver-with-esp32s3-lite/usb-cdc-wired-communication.md
+                        - HTTP 无线通信: reference/bus-devices/robot-driver-with-esp32s3-lite/http-wireless-communication.md
+                        - Websocket 无线通信: reference/bus-devices/robot-driver-with-esp32s3-lite/websocket-wireless-communication.md
+                        - 刷机重置: reference/bus-devices/robot-driver-with-esp32s3-lite/firmware-flash-and-reset.md
+                        - 二次开发指南: reference/bus-devices/robot-driver-with-esp32s3-lite/advanced-development.md
+                        - S.BUS 二次开发: reference/bus-devices/robot-driver-with-esp32s3-lite/sbus-development.md
+                        - FAQ: reference/bus-devices/robot-driver-with-esp32s3-lite/faq.md
             - 下载中心: downloads/index.md
         - locale: en
           name: English
