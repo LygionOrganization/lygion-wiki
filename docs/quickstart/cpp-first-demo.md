@@ -197,7 +197,7 @@ TTL Bus Device
 C++ SDK 地址：
 
 ```text
-https://github.com/LygionRobotics/lygion_devs_cpp
+https://github.com/LygionOrganization/lygion_devs_cpp
 ```
 
 如果无法访问 GitHub，可以从下载中心下载压缩包：

@@ -4,12 +4,12 @@
 
 ## Python SDK
 
-- [GitHub Python SDK](https://github.com/LygionRobotics/lygion_devs_py)
+- [GitHub Python SDK](https://github.com/LygionOrganization/lygion_devs_py)
 - [本站 Python SDK](../assets/files/lygion_devs_py.zip)
 
 ## C++ / Arduino SDK
 
-- [GitHub C++ SDK](https://github.com/LygionRobotics/lygion_devs_cpp)
+- [GitHub C++ SDK](https://github.com/LygionOrganization/lygion_devs_cpp)
 - [本站 C++ SDK](../assets/files/lygion_devs_cpp.zip)
 
 ## FD 调试软件

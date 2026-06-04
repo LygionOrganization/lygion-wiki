@@ -187,21 +187,21 @@ Python 3.12.x
 === "Linux"
 
     ```bash
-    git clone https://github.com/LygionRobotics/lygion_devs_py.git
+    git clone https://github.com/LygionOrganization/lygion_devs_py.git
     cd lygion_devs_py
     ```
 
 === "macOS"
 
     ```bash
-    git clone https://github.com/LygionRobotics/lygion_devs_py.git
+    git clone https://github.com/LygionOrganization/lygion_devs_py.git
     cd lygion_devs_py
     ```
 
 === "Windows"
 
     ```powershell
-    git clone https://github.com/LygionRobotics/lygion_devs_py.git
+    git clone https://github.com/LygionOrganization/lygion_devs_py.git
     cd lygion_devs_py
     ```
 

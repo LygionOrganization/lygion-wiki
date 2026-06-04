@@ -2,8 +2,8 @@ site_name: Lygion Wiki
 site_description: Product documentation, tutorials, reference guides, and open-source resources for Lygion Robotics.
 site_url: https://wiki.lygion.ai/
 
-repo_name: LygionRobotics/lygion-wiki
-repo_url: https://github.com/LygionRobotics/lygion-wiki
+repo_name: LygionOrganization/lygion-wiki
+repo_url: https://github.com/LygionOrganization/lygion-wiki
 edit_uri: blob/main/docs/
 
 theme:

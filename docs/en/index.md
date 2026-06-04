@@ -66,5 +66,5 @@ FD is a Windows utility for scanning TTL bus devices, changing IDs and baud rate
 ## Links
 
 - [Lygion Robotics website](https://lygion.ai)
-- [Lygion Robotics on GitHub](https://github.com/LygionRobotics/)
+- [Lygion Organization on GitHub](https://github.com/LygionOrganization/)
 - [Chinese documentation](../)
