@@ -100,6 +100,9 @@ plugins:
                         - C++ / Arduino: reference/bus-devices/ttl-stepper-driver-a/cpp-arduino.md
                         - 限位、回零与心跳保护: reference/bus-devices/ttl-stepper-driver-a/limits-homing-heartbeat.md
                         - FAQ: reference/bus-devices/ttl-stepper-driver-a/faq.md
+                    - 总线集线板:
+                        - TTL-5264 8P Hub (A): reference/bus-devices/hub-boards/ttl-5264-8p-hub-a.md
+                        - HC-1.25 8P Hub (A): reference/bus-devices/hub-boards/hc-1.25-8p-hub-a.md
                     - Robot Driver with ESP32S3 Lite:
                         - reference/bus-devices/robot-driver-with-esp32s3-lite/index.md
                         - 板载资源介绍: reference/bus-devices/robot-driver-with-esp32s3-lite/board-resources.md
@@ -119,9 +122,72 @@ plugins:
           build: true
           nav:
             - Home: index.md
-            - Quick Start: quickstart/index.md
-            - Tutorials: tutorials/index.md
-            - Reference: reference/index.md
+            - Quick Start:
+                - quickstart/index.md
+                - Python First Demo: quickstart/python-first-demo.md
+                - C++ / Arduino First Demo: quickstart/cpp-first-demo.md
+            - Tutorials:
+                - tutorials/index.md
+                - Computers and SBCs:
+                    - Install the USB Serial Driver: tutorials/install-usb-serial-driver.md
+                    - Open a Terminal: tutorials/open-terminal.md
+                    - Install Python: tutorials/install-python.md
+                    - Find the Serial Port: tutorials/find-serial-port.md
+                    - Run Python Scripts: tutorials/run-python-scripts.md
+                - Embedded Controllers:
+                    - Install Arduino IDE: tutorials/install-arduino-ide.md
+                    - Install PlatformIO: tutorials/install-platformio.md
+                    - MCU UART Wiring: tutorials/mcu-uart-wiring.md
+                    - Upload an Arduino Example: tutorials/upload-arduino-sketch.md
+                    - Use a Serial Monitor: tutorials/serial-monitor.md
+                - TTL Bus Fundamentals:
+                    - Device IDs and Baud Rates: tutorials/device-id-and-baudrate.md
+                    - Power and Wiring: tutorials/power-and-wiring-basics.md
+                    - Power Grouping and Isolation: tutorials/power-grouping-and-decoupling.md
+                    - Communication Troubleshooting: tutorials/communication-troubleshooting.md
+                    - FD Device Utility: tutorials/fd-tool.md
+            - Product Reference:
+                - reference/index.md
+                - TTL Bus Devices:
+                    - reference/bus-devices/index.md
+                    - TTL Adapter (A):
+                        - reference/bus-devices/ttl-adapter-a/index.md
+                        - Hardware Overview: reference/bus-devices/ttl-adapter-a/hardware-overview.md
+                        - Power and Wiring: reference/bus-devices/ttl-adapter-a/power-and-wiring.md
+                        - Drivers and Serial Ports: reference/bus-devices/ttl-adapter-a/drivers-and-ports.md
+                        - SDKs and Tools: reference/bus-devices/ttl-adapter-a/sdk-and-tools.md
+                    - TTL Encoder E02:
+                        - reference/bus-devices/ttl-encoder-e02/index.md
+                        - Hardware Installation: reference/bus-devices/ttl-encoder-e02/hardware-installation.md
+                        - Python: reference/bus-devices/ttl-encoder-e02/python-quickstart.md
+                        - C++ / Arduino: reference/bus-devices/ttl-encoder-e02/cpp-arduino.md
+                        - Calibration and Multi-Turn: reference/bus-devices/ttl-encoder-e02/calibration-and-multiturn.md
+                        - FAQ: reference/bus-devices/ttl-encoder-e02/faq.md
+                    - TTL Stepper Driver (A):
+                        - reference/bus-devices/ttl-stepper-driver-a/index.md
+                        - Hardware Wiring: reference/bus-devices/ttl-stepper-driver-a/hardware-wiring.md
+                        - Operating Modes: reference/bus-devices/ttl-stepper-driver-a/operating-modes.md
+                        - Motion and Current Parameters: reference/bus-devices/ttl-stepper-driver-a/parameters.md
+                        - Python: reference/bus-devices/ttl-stepper-driver-a/python-quickstart.md
+                        - C++ / Arduino: reference/bus-devices/ttl-stepper-driver-a/cpp-arduino.md
+                        - Limits, Homing, and Heartbeat: reference/bus-devices/ttl-stepper-driver-a/limits-homing-heartbeat.md
+                        - FAQ: reference/bus-devices/ttl-stepper-driver-a/faq.md
+                    - Bus Hubs:
+                        - TTL-5264 8P Hub (A): reference/bus-devices/hub-boards/ttl-5264-8p-hub-a.md
+                        - HC-1.25 8P Hub (A): reference/bus-devices/hub-boards/hc-1.25-8p-hub-a.md
+                    - Robot Driver with ESP32S3 Lite:
+                        - reference/bus-devices/robot-driver-with-esp32s3-lite/index.md
+                        - Board Resources and Power: reference/bus-devices/robot-driver-with-esp32s3-lite/board-resources.md
+                        - Web App Quick Start: reference/bus-devices/robot-driver-with-esp32s3-lite/quickstart.md
+                        - Action Scripting: reference/bus-devices/robot-driver-with-esp32s3-lite/action-scripting.md
+                        - JSON Command Interface: reference/bus-devices/robot-driver-with-esp32s3-lite/json-command-interaction.md
+                        - USB CDC Communication: reference/bus-devices/robot-driver-with-esp32s3-lite/usb-cdc-wired-communication.md
+                        - HTTP Communication: reference/bus-devices/robot-driver-with-esp32s3-lite/http-wireless-communication.md
+                        - WebSocket Communication: reference/bus-devices/robot-driver-with-esp32s3-lite/websocket-wireless-communication.md
+                        - Firmware Flashing and Reset: reference/bus-devices/robot-driver-with-esp32s3-lite/firmware-flash-and-reset.md
+                        - Advanced Firmware Development: reference/bus-devices/robot-driver-with-esp32s3-lite/advanced-development.md
+                        - S.BUS Development: reference/bus-devices/robot-driver-with-esp32s3-lite/sbus-development.md
+                        - FAQ: reference/bus-devices/robot-driver-with-esp32s3-lite/faq.md
             - Downloads: downloads/index.md
 
 markdown_extensions:
