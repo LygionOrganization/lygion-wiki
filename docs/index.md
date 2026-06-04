@@ -1,7 +1,7 @@
 # Lygion Wiki
 
 <div class="ly-lang-switch__buttons">
-  <a class="ly-lang-switch__button" href="/en/index">🌐 English</a>
+  <a class="ly-lang-switch__button" href="en/">🌐 English</a>
 </div>
 
 欢迎使用 Lygion Robotics 产品 Wiki。

@@ -34,20 +34,24 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Build MkDocs site
+      - name: Build GitHub Pages site
         run: |
-          mkdocs build --clean
+          mkdocs build --clean --config-file mkdocs.github-pages.yml --site-dir site-github-pages
+
+      - name: Build Aliyun site
+        run: |
+          mkdocs build --clean --site-dir site-aliyun
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: site-github-pages
 
       - name: Upload site artifact for Aliyun deploy
         uses: actions/upload-artifact@v4
         with:
           name: lygion-wiki-site
-          path: site
+          path: site-aliyun
 
   deploy-github-pages:
     name: Deploy to GitHub Pages

@@ -10,6 +10,8 @@ __pycache__/
 
 # MkDocs build output
 site/
+site-aliyun/
+site-github-pages/
 
 # OS files
 .DS_Store
