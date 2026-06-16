@@ -1,6 +1,6 @@
 # 安装 PlatformIO
 
-PlatformIO 是基于 VS Code 的嵌入式开发环境，适合需要长期维护 MCU 工程的用户。
+PlatformIO 是集成在 VS Code 中的嵌入式开发环境，适合需要长期维护 MCU 工程的用户。本页只用于快速完成安装；如果你要修改完整固件，请阅读[VS Code + PlatformIO 复杂项目开发](platformio-development/index.md)。
 
 如果你是第一次使用 MCU，建议先使用 [Arduino IDE](install-arduino-ide.md)。如果你已经熟悉 VS Code，PlatformIO 会更适合工程化开发。
 
@@ -86,6 +86,7 @@ Serial.begin(115200);
 
 ## 6. 下一步
 
+- [VS Code + PlatformIO 复杂项目开发](platformio-development/index.md)
 - [MCU C++ 路线：跑通第一个 Demo](../quickstart/cpp-first-demo.md)
 - [MCU UART 接线基础](mcu-uart-wiring.md)
 - [打开串口监视器](serial-monitor.md)

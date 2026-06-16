@@ -31,3 +31,4 @@ These guides cover tasks that apply across multiple Lygion products. Product pag
 | [Power grouping and isolation](power-grouping-and-decoupling.md) | Your system contains multiple voltages or high-current devices |
 | [Communication troubleshooting](communication-troubleshooting.md) | A port will not open, a ping fails, or a read times out |
 | [FD device utility](fd-tool.md) | You want to scan or configure devices from Windows |
+For larger firmware projects, follow [Developing Complex Projects with VS Code and PlatformIO](platformio-development/index.md).

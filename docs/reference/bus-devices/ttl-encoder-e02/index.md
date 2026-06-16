@@ -1,5 +1,7 @@
 # TTL Encoder E02
 
+<a href="https://item.taobao.com/item.htm?id=1045073021718&mi_id=0000Uba3GUmsMVuHwnHyEPwNFNvIitkyTX3ihcVdByykbM4&spm=a21xtw.29178619.0.0&xxc=shop&skuId=6068297841127" target="_blank">淘宝购买链接</a>
+
 TTL Encoder E02 是一款基于单线 TTL 总线通信的 12bit 绝对角度磁编码器，可用于读取机械结构的角度和速度反馈。
 
 ![TTL Encoder E02](assets/ttle02-01.png){ .img-rounded width="360" }

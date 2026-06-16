@@ -17,6 +17,7 @@
 | --- | --- |
 | [安装 Arduino IDE](install-arduino-ide.md) | 第一次使用 Arduino / ESP32 / STM32 示例的用户 |
 | [安装 PlatformIO](install-platformio.md) | 使用 VS Code 做嵌入式开发的用户 |
+| [VS Code + PlatformIO 复杂项目开发](platformio-development/index.md) | 修改完整固件、管理依赖和长期维护项目的用户 |
 | [MCU UART 接线基础](mcu-uart-wiring.md) | 使用 ESP32 / STM32 / Arduino 连接 TTL 总线设备的用户 |
 | [上传 Arduino 示例程序](upload-arduino-sketch.md) | 不熟悉 Arduino IDE 上传流程的用户 |
 | [打开串口监视器](serial-monitor.md) | 不知道如何查看 MCU 输出的用户 |

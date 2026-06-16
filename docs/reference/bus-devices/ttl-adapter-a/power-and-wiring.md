@@ -2,6 +2,8 @@
 
 TTL Adapter (A) 支持 USB 通信、UART 通信和单线 TTL 总线通信。不同使用方式的接线逻辑不同。
 
+![TTL Adapter (A)](assets/ttla05.png){ .img-rounded }
+
 ## PC / SBC USB 控制
 
 ```text
@@ -42,6 +44,8 @@ TTL Adapter (A) 的 UART 接口可连接 ESP32、STM32、Arduino 等 MCU。
     当 TTL Adapter (A) 作为单线 TTL 转接板使用时，外部 MCU 与 Adapter 的 UART 连接通常为 `TX 接 TX`、`RX 接 RX`、`GND 接 GND`。
 
 ## 分组供电
+
+![TTL Adapter (A)](assets/ttla06.png){ .img-rounded }
 
 多个 TTL Adapter 或 Hub 可用于分组供电，使不同电压或大电流设备更容易布线。
 

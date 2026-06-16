@@ -6,6 +6,11 @@
 
 ### 方案 A：MCU 接 TTL Adapter (A)
 
+!!! note "适用场景"
+      该方案适用于绝大部分用户使用。
+
+![MCU UART WIRING](assets/t01.png){ .img-rounded }
+
 ```text
 MCU UART
    │ RX / TX / GND
@@ -16,25 +21,7 @@ TTL Adapter (A)
 TTL Bus Device
 ```
 
-该方案适合快速验证和原型开发。
-
-### 方案 B：MCU 接自定义 UART 转单线 TTL 电路
-
-```text
-MCU UART
-   │
-   ▼
-UART 转单线 TTL 电路
-   │
-   ▼
-TTL Bus Device
-```
-
-该方案适合自定义主控板或量产产品。
-
-## 2. MCU 接 TTL Adapter (A) 的接线
-
-常见接法：
+#### MCU 接 TTL Adapter (A) 的接线
 
 | MCU | TTL Adapter (A) |
 | --- | --- |
@@ -47,7 +34,7 @@ TTL Bus Device
 
     如果你使用的是普通 USB-TTL 模块或自定义电路，接线方式可能不同，需要按电路设计确认。
 
-## 3. 电平要求
+#### 电平要求
 
 TTL Adapter (A) 的 UART 通信电平为：
 
@@ -60,20 +47,35 @@ TTL Adapter (A) 的 UART 通信电平为：
 | MCU | 是否通常兼容 |
 | --- | --- |
 | ESP32 / ESP32S3 | 兼容 3.3V |
-| STM32 3.3V 板 | 通常兼容 |
-| Arduino Mega2560 | IO 为 5V，需要确认输入兼容性 |
-| 自定义 5V MCU | 建议使用电平转换 |
+| STM32 | 通常兼容 |
+| Arduino Mega2560 | IO 为 5V，需要使用电平转换 |
 
 !!! warning "不要直接把不兼容的 5V UART 接入 3.3V 输入"
     如果 MCU TX 输出 5V，而对方输入不耐受 5V，可能损坏芯片。必要时请使用电平转换电路。
 
-## 4. 代码中的串口配置
+### 方案 B：MCU 接自定义 UART 转单线 TTL 电路
+
+!!! note "适用场景"
+      该方案适用于有高集成度需求的用户使用。
+
+![MCU UART WIRING](assets/t03.png){ .img-rounded }
+
+```text
+MCU UART (TXD RXD VCC-串口电平 GND)
+   │
+   ▼
+UART 转单线 TTL 电路
+   │
+   ▼
+TTL Bus Device (DATA)
+```
+
+## 2. 代码中的串口配置
 
 ### ESP32S3 示例
 
 ```cpp
-Serial.begin(115200);
-Serial1.begin(1000000, SERIAL_8N1, 18, 17);
+Serial1.begin(1000000, SERIAL_8N1, 18, 17); // 总线设备通信
 ttlsd.pSerial = &Serial1;
 ```
 
@@ -81,7 +83,6 @@ ttlsd.pSerial = &Serial1;
 
 | 参数 | 含义 |
 | --- | --- |
-| `115200` | USB 调试串口波特率，用于串口监视器 |
 | `1000000` | TTL 总线波特率，默认 1 Mbps |
 | `18` | ESP32S3 RX 引脚 |
 | `17` | ESP32S3 TX 引脚 |
@@ -89,8 +90,7 @@ ttlsd.pSerial = &Serial1;
 ### Mega2560 示例
 
 ```cpp
-Serial.begin(115200);
-Serial1.begin(1000000);
+Serial1.begin(1000000); // 总线设备通信
 ttlsd.pSerial = &Serial1;
 ```
 
@@ -101,7 +101,7 @@ RX1 = 19
 TX1 = 18
 ```
 
-## 5. 总线设备接线
+## 3. 总线设备接线
 
 TTL 总线常见三根线：
 
@@ -118,14 +118,14 @@ S   单线 TTL 信号
 - 所有设备 GND 必须共地。
 - 执行器类设备需要外部电源。
 
-## 6. 第一次接线建议
+## 4. 第一次接线建议
 
 1. 只连接一个 TTL 总线设备。
 2. 先运行读取类 Demo。
 3. 确认能读取数据后，再连接执行器负载。
 4. 多设备接入前，先分别修改每个设备 ID。
 
-## 7. 常见问题
+## 5. 常见问题
 
 ### Q1：为什么串口监视器有输出，但读不到设备？
 

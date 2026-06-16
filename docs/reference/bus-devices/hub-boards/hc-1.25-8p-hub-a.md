@@ -1,6 +1,6 @@
 # HC-1.25 8P Hub (A)
 
-[淘宝购买链接](https://item.taobao.com/item.htm?id=1002585764342&mi_id=0000YXOCtRmNxy1Iv6lT5f-IT_99heIdHCVFteEAld9UUgg&spm=a21xtw.29178619.0.0&xxc=shop&skuId=6155318343680)
+<a href="https://item.taobao.com/item.htm?id=1002585764342&mi_id=0000YXOCtRmNxy1Iv6lT5f-IT_99heIdHCVFteEAld9UUgg&spm=a21xtw.29178619.0.0&xxc=shop&skuId=6155318343680" target="_blank">淘宝购买链接</a>
 
 ### 产品定位
 

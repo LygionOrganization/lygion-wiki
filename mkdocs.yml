@@ -2,6 +2,11 @@ site_name: Lygion Wiki
 site_description: Product documentation, tutorials, reference guides, and open-source resources for Lygion Robotics.
 site_url: https://wiki.lygion.ai/
 
+exclude_docs: |
+  reference/bus-devices/robot-driver-with-esp32s3-lite/PDF文档（251018）/*
+  reference/bus-devices/ttl-node-a/TTL_Node_(A)_使用文档.pdf
+  reference/robots/linkarm-lt/文档/*
+
 repo_name: LygionOrganization/lygion-wiki
 repo_url: https://github.com/LygionOrganization/lygion-wiki
 edit_uri: blob/main/docs/
@@ -65,6 +70,16 @@ plugins:
                 - 嵌入式设备（C++）:
                     - 安装 Arduino IDE: tutorials/install-arduino-ide.md
                     - 安装 PlatformIO: tutorials/install-platformio.md
+                    - VS Code + PlatformIO 复杂项目开发:
+                        - tutorials/platformio-development/index.md
+                        - 安装开发环境: tutorials/platformio-development/setup.md
+                        - 获取并打开项目: tutorials/platformio-development/open-project.md
+                        - 理解工程结构: tutorials/platformio-development/project-structure.md
+                        - 配置 platformio.ini: tutorials/platformio-development/configuration.md
+                        - 编译、上传与调试: tutorials/platformio-development/build-upload-debug.md
+                        - 依赖与资源文件: tutorials/platformio-development/dependencies-and-data.md
+                        - Git 开发工作流: tutorials/platformio-development/git-workflow.md
+                        - 常见问题: tutorials/platformio-development/troubleshooting.md
                     - MCU UART 接线基础: tutorials/mcu-uart-wiring.md
                     - 上传 Arduino 示例程序: tutorials/upload-arduino-sketch.md
                     - 打开串口监视器: tutorials/serial-monitor.md
@@ -100,22 +115,73 @@ plugins:
                         - C++ / Arduino: reference/bus-devices/ttl-stepper-driver-a/cpp-arduino.md
                         - 限位、回零与心跳保护: reference/bus-devices/ttl-stepper-driver-a/limits-homing-heartbeat.md
                         - FAQ: reference/bus-devices/ttl-stepper-driver-a/faq.md
+                    - TTL Node (A):
+                        - reference/bus-devices/ttl-node-a/index.md
+                        - 快速开始: reference/bus-devices/ttl-node-a/quickstart.md
+                        - 硬件概览: reference/bus-devices/ttl-node-a/hardware-overview.md
+                        - 供电与接线: reference/bus-devices/ttl-node-a/power-and-wiring.md
+                        - 驱动与串口: reference/bus-devices/ttl-node-a/drivers-and-ports.md
+                        - 使用 FD 配置: reference/bus-devices/ttl-node-a/fd-configuration.md
+                        - Arduino 开发: reference/bus-devices/ttl-node-a/arduino-development.md
+                        - SDK 与工具: reference/bus-devices/ttl-node-a/sdk-and-tools.md
+                    - Robot Driver with ESP32S3 Lite:
+                        - reference/bus-devices/robot-driver-with-esp32s3-lite/index.md
+                        - 快速开始: reference/bus-devices/robot-driver-with-esp32s3-lite/quickstart.md
+                        - Web 控制台: reference/bus-devices/robot-driver-with-esp32s3-lite/web-console.md
+                        - 舵机与总线设备: reference/bus-devices/robot-driver-with-esp32s3-lite/servo-control.md
+                        - 动作脚本与任务文件: reference/bus-devices/robot-driver-with-esp32s3-lite/action-scripting.md
+                        - JSON 指令参考: reference/bus-devices/robot-driver-with-esp32s3-lite/json-command-interaction.md
+                        - 上位机通信: reference/bus-devices/robot-driver-with-esp32s3-lite/host-communication.md
+                        - 硬件资源与接线: reference/bus-devices/robot-driver-with-esp32s3-lite/board-resources.md
+                        - UART 透传与 S.BUS: reference/bus-devices/robot-driver-with-esp32s3-lite/uart-sbus.md
+                        - 固件恢复: reference/bus-devices/robot-driver-with-esp32s3-lite/firmware-flash-and-reset.md
+                        - PlatformIO 二次开发: reference/bus-devices/robot-driver-with-esp32s3-lite/advanced-development.md
+                        - 故障排查: reference/bus-devices/robot-driver-with-esp32s3-lite/faq.md
+                    - 总线舵机:
+                        - reference/bus-devices/bus-servos/index.md
+                        - sc-1500-c023: reference/bus-devices/bus-servos/sc-1500-c023.md
+                        - sc-1500-c024: reference/bus-devices/bus-servos/sc-1500-c024.md
+                        - sc-0090-c043: reference/bus-devices/bus-servos/sc-0090-c043.md
+                        - sc-0090-c049: reference/bus-devices/bus-servos/sc-0090-c049.md
                     - 总线集线板:
                         - TTL-5264 8P Hub (A): reference/bus-devices/hub-boards/ttl-5264-8p-hub-a.md
                         - HC-1.25 8P Hub (A): reference/bus-devices/hub-boards/hc-1.25-8p-hub-a.md
-                    - Robot Driver with ESP32S3 Lite:
-                        - reference/bus-devices/robot-driver-with-esp32s3-lite/index.md
-                        - 板载资源介绍: reference/bus-devices/robot-driver-with-esp32s3-lite/board-resources.md
-                        - 初次使用教程: reference/bus-devices/robot-driver-with-esp32s3-lite/quickstart.md
-                        - 动作脚本编排: reference/bus-devices/robot-driver-with-esp32s3-lite/action-scripting.md
-                        - JSON 指令交互: reference/bus-devices/robot-driver-with-esp32s3-lite/json-command-interaction.md
-                        - USB CDC 有线通信: reference/bus-devices/robot-driver-with-esp32s3-lite/usb-cdc-wired-communication.md
-                        - HTTP 无线通信: reference/bus-devices/robot-driver-with-esp32s3-lite/http-wireless-communication.md
-                        - Websocket 无线通信: reference/bus-devices/robot-driver-with-esp32s3-lite/websocket-wireless-communication.md
-                        - 刷机重置: reference/bus-devices/robot-driver-with-esp32s3-lite/firmware-flash-and-reset.md
-                        - 二次开发指南: reference/bus-devices/robot-driver-with-esp32s3-lite/advanced-development.md
-                        - S.BUS 二次开发: reference/bus-devices/robot-driver-with-esp32s3-lite/sbus-development.md
-                        - FAQ: reference/bus-devices/robot-driver-with-esp32s3-lite/faq.md
+                - 机器人模组:
+                    - reference/modules/index.md
+                    - 舵轮 SW69-TTL: reference/modules/sw69-ttl/index.md
+                    - 步进电机 4240BY-G5.2: reference/modules/4240by-g5-2/index.md
+                    - 同步轮 3M 72T: reference/modules/pulley-3m-72t/index.md
+                    - 驱动轮 DW69: reference/modules/dw69/index.md
+                    - 关节执行器 DM42-G7220-E02: reference/modules/dm42-g7220-e02/index.md
+                - 机器人整机:
+                    - reference/robots/index.md
+                    - LinkArm-M:
+                        - reference/robots/linkarm-m/index.md
+                        - 快速开始: reference/robots/linkarm-m/quickstart.md
+                        - 配置与中位校准: reference/robots/linkarm-m/configuration-and-calibration.md
+                        - CLI 命令控制: reference/robots/linkarm-m/cli-control.md
+                        - Python SDK 开发: reference/robots/linkarm-m/python-sdk.md
+                        - 外设与维护: reference/robots/linkarm-m/peripherals-and-maintenance.md
+                        - 多机械臂与 AI 集成: reference/robots/linkarm-m/multi-arm-and-ai.md
+                        - 故障排查: reference/robots/linkarm-m/faq.md
+                    - LinkArm-LT:
+                        - reference/robots/linkarm-lt/index.md
+                        - 快速开始: reference/robots/linkarm-lt/quickstart.md
+                        - Web 控制台: reference/robots/linkarm-lt/web-control.md
+                        - ESP-NOW 同步示教: reference/robots/linkarm-lt/sync-teaching.md
+                        - 动作脚本: reference/robots/linkarm-lt/action-scripting.md
+                        - JSON 指令参考: reference/robots/linkarm-lt/json-commands.md
+                        - 上位机通信: reference/robots/linkarm-lt/host-communication.md
+                        - 固件恢复与中位校准: reference/robots/linkarm-lt/firmware-and-calibration.md
+                        - 项目集成与尺寸: reference/robots/linkarm-lt/integration.md
+                        - 故障排查: reference/robots/linkarm-lt/faq.md
+                - 灵影开源:
+                    - reference/open-lygion/index.md
+                    - Python SDK: reference/open-lygion/python-sdk.md
+                    - C++ SDK: reference/open-lygion/cpp-sdk.md
+                    - 6x6 Rover: reference/open-lygion/6x6-rover.md
+                    - 5+1 DOF Robotic Arm: reference/open-lygion/5-plus-1-dof-robotic-arm.md
+                    - self-locking-gripper: reference/open-lygion/self-locking-gripper.md
             - 下载中心: downloads/index.md
         - locale: en
           name: English
@@ -137,6 +203,16 @@ plugins:
                 - Embedded Controllers:
                     - Install Arduino IDE: tutorials/install-arduino-ide.md
                     - Install PlatformIO: tutorials/install-platformio.md
+                    - Complex Projects with VS Code + PlatformIO:
+                        - tutorials/platformio-development/index.md
+                        - Set Up the Environment: tutorials/platformio-development/setup.md
+                        - Get and Open a Project: tutorials/platformio-development/open-project.md
+                        - Understand Project Structure: tutorials/platformio-development/project-structure.md
+                        - Configure platformio.ini: tutorials/platformio-development/configuration.md
+                        - Build, Upload, and Debug: tutorials/platformio-development/build-upload-debug.md
+                        - Dependencies and Data Files: tutorials/platformio-development/dependencies-and-data.md
+                        - Git Workflow: tutorials/platformio-development/git-workflow.md
+                        - Troubleshooting: tutorials/platformio-development/troubleshooting.md
                     - MCU UART Wiring: tutorials/mcu-uart-wiring.md
                     - Upload an Arduino Example: tutorials/upload-arduino-sketch.md
                     - Use a Serial Monitor: tutorials/serial-monitor.md
@@ -172,22 +248,73 @@ plugins:
                         - C++ / Arduino: reference/bus-devices/ttl-stepper-driver-a/cpp-arduino.md
                         - Limits, Homing, and Heartbeat: reference/bus-devices/ttl-stepper-driver-a/limits-homing-heartbeat.md
                         - FAQ: reference/bus-devices/ttl-stepper-driver-a/faq.md
+                    - TTL Node (A):
+                        - reference/bus-devices/ttl-node-a/index.md
+                        - Quick Start: reference/bus-devices/ttl-node-a/quickstart.md
+                        - Hardware Overview: reference/bus-devices/ttl-node-a/hardware-overview.md
+                        - Power and Wiring: reference/bus-devices/ttl-node-a/power-and-wiring.md
+                        - Drivers and Serial Ports: reference/bus-devices/ttl-node-a/drivers-and-ports.md
+                        - Configure with FD: reference/bus-devices/ttl-node-a/fd-configuration.md
+                        - Arduino Development: reference/bus-devices/ttl-node-a/arduino-development.md
+                        - SDKs and Tools: reference/bus-devices/ttl-node-a/sdk-and-tools.md
+                    - TTL Bus Servos:
+                        - reference/bus-devices/bus-servos/index.md
+                        - SC-1500-C023: reference/bus-devices/bus-servos/sc-1500-c023.md
+                        - SC-1500-C024: reference/bus-devices/bus-servos/sc-1500-c024.md
+                        - SC-0090-C043: reference/bus-devices/bus-servos/sc-0090-c043.md
+                        - SC-0090-C049: reference/bus-devices/bus-servos/sc-0090-c049.md
                     - Bus Hubs:
                         - TTL-5264 8P Hub (A): reference/bus-devices/hub-boards/ttl-5264-8p-hub-a.md
                         - HC-1.25 8P Hub (A): reference/bus-devices/hub-boards/hc-1.25-8p-hub-a.md
                     - Robot Driver with ESP32S3 Lite:
                         - reference/bus-devices/robot-driver-with-esp32s3-lite/index.md
-                        - Board Resources and Power: reference/bus-devices/robot-driver-with-esp32s3-lite/board-resources.md
-                        - Web App Quick Start: reference/bus-devices/robot-driver-with-esp32s3-lite/quickstart.md
+                        - Quick Start: reference/bus-devices/robot-driver-with-esp32s3-lite/quickstart.md
+                        - Web Console: reference/bus-devices/robot-driver-with-esp32s3-lite/web-console.md
+                        - Servos and Bus Devices: reference/bus-devices/robot-driver-with-esp32s3-lite/servo-control.md
                         - Action Scripting: reference/bus-devices/robot-driver-with-esp32s3-lite/action-scripting.md
                         - JSON Command Interface: reference/bus-devices/robot-driver-with-esp32s3-lite/json-command-interaction.md
-                        - USB CDC Communication: reference/bus-devices/robot-driver-with-esp32s3-lite/usb-cdc-wired-communication.md
-                        - HTTP Communication: reference/bus-devices/robot-driver-with-esp32s3-lite/http-wireless-communication.md
-                        - WebSocket Communication: reference/bus-devices/robot-driver-with-esp32s3-lite/websocket-wireless-communication.md
+                        - Host Communication: reference/bus-devices/robot-driver-with-esp32s3-lite/host-communication.md
+                        - Board Resources and Wiring: reference/bus-devices/robot-driver-with-esp32s3-lite/board-resources.md
+                        - UART Passthrough and S.BUS: reference/bus-devices/robot-driver-with-esp32s3-lite/uart-sbus.md
                         - Firmware Flashing and Reset: reference/bus-devices/robot-driver-with-esp32s3-lite/firmware-flash-and-reset.md
                         - Advanced Firmware Development: reference/bus-devices/robot-driver-with-esp32s3-lite/advanced-development.md
-                        - S.BUS Development: reference/bus-devices/robot-driver-with-esp32s3-lite/sbus-development.md
                         - FAQ: reference/bus-devices/robot-driver-with-esp32s3-lite/faq.md
+                - Robot Modules:
+                    - reference/modules/index.md
+                    - SW69-TTL Steering Wheel Module: reference/modules/sw69-ttl/index.md
+                    - 4240BY-G5.2 Stepper Motor: reference/modules/4240by-g5-2/index.md
+                    - 3M 72T Timing Pulley: reference/modules/pulley-3m-72t/index.md
+                    - DW69 Drive Wheel: reference/modules/dw69/index.md
+                    - DM42-G7220-E02 Joint Actuator: reference/modules/dm42-g7220-e02/index.md
+                - Robots:
+                    - reference/robots/index.md
+                    - LinkArm-M:
+                        - reference/robots/linkarm-m/index.md
+                        - Quick Start: reference/robots/linkarm-m/quickstart.md
+                        - Configuration and Calibration: reference/robots/linkarm-m/configuration-and-calibration.md
+                        - CLI Control: reference/robots/linkarm-m/cli-control.md
+                        - Python SDK: reference/robots/linkarm-m/python-sdk.md
+                        - Peripherals and Maintenance: reference/robots/linkarm-m/peripherals-and-maintenance.md
+                        - Multiple Arms and AI: reference/robots/linkarm-m/multi-arm-and-ai.md
+                        - Troubleshooting: reference/robots/linkarm-m/faq.md
+                    - LinkArm-LT:
+                        - reference/robots/linkarm-lt/index.md
+                        - Quick Start: reference/robots/linkarm-lt/quickstart.md
+                        - Web Control: reference/robots/linkarm-lt/web-control.md
+                        - ESP-NOW Synchronized Teaching: reference/robots/linkarm-lt/sync-teaching.md
+                        - Action Scripting: reference/robots/linkarm-lt/action-scripting.md
+                        - JSON Command Reference: reference/robots/linkarm-lt/json-commands.md
+                        - Host Communication: reference/robots/linkarm-lt/host-communication.md
+                        - Firmware and Calibration: reference/robots/linkarm-lt/firmware-and-calibration.md
+                        - Integration and Dimensions: reference/robots/linkarm-lt/integration.md
+                        - Troubleshooting: reference/robots/linkarm-lt/faq.md
+                - Open Lygion:
+                    - reference/open-lygion/index.md
+                    - Python SDK: reference/open-lygion/python-sdk.md
+                    - C++ SDK: reference/open-lygion/cpp-sdk.md
+                    - 6x6 Rover: reference/open-lygion/6x6-rover.md
+                    - 5+1 DOF Robotic Arm: reference/open-lygion/5-plus-1-dof-robotic-arm.md
+                    - Self-locking Gripper: reference/open-lygion/self-locking-gripper.md
             - Downloads: downloads/index.md
 
 markdown_extensions:
@@ -218,5 +345,28 @@ validation:
   unrecognized_links: warn
   anchors: warn
 
+not_in_nav: |
+  en/reference/bus-devices/robot-driver-with-esp32s3-lite/http-wireless-communication.md
+  en/reference/bus-devices/robot-driver-with-esp32s3-lite/sbus-development.md
+  en/reference/bus-devices/robot-driver-with-esp32s3-lite/usb-cdc-wired-communication.md
+  en/reference/bus-devices/robot-driver-with-esp32s3-lite/websocket-wireless-communication.md
+  tutorials/platformio-development/*
+  reference/bus-devices/bus-servos/*
+  reference/bus-devices/robot-driver-with-esp32s3-lite/http-wireless-communication.md
+  reference/bus-devices/robot-driver-with-esp32s3-lite/host-communication.md
+  reference/bus-devices/robot-driver-with-esp32s3-lite/sbus-development.md
+  reference/bus-devices/robot-driver-with-esp32s3-lite/servo-control.md
+  reference/bus-devices/robot-driver-with-esp32s3-lite/uart-sbus.md
+  reference/bus-devices/robot-driver-with-esp32s3-lite/usb-cdc-wired-communication.md
+  reference/bus-devices/robot-driver-with-esp32s3-lite/web-console.md
+  reference/bus-devices/robot-driver-with-esp32s3-lite/websocket-wireless-communication.md
+  reference/bus-devices/ttl-node-a/*
+  reference/modules/*
+  reference/open-lygion/*
+  reference/robots/*
+
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/language-redirect.js

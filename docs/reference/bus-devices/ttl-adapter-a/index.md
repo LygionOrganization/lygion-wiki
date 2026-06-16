@@ -1,6 +1,6 @@
 # TTL Adapter (A)
 
-[淘宝购买链接](https://item.taobao.com/item.htm?id=983866781632&mi_id=0000IWUJGGoNcGk3nsNMEVwQL9fkDaIBh-RqoLIzC7UwpL8&spm=a21xtw.29178619.0.0&xxc=shop)
+<a href="https://item.taobao.com/item.htm?id=983866781632&mi_id=0000IWUJGGoNcGk3nsNMEVwQL9fkDaIBh-RqoLIzC7UwpL8&spm=a21xtw.29178619.0.0&xxc=shop" target="_blank">淘宝购买链接</a>
 
 TTL Adapter (A) 是一款用于机器人和嵌入式系统的 TTL 总线通信适配器。它可以把电脑 USB 接口或 MCU UART 接口转换为单线 TTL 总线，用于控制 Lygion TTL 总线设备和兼容的飞特 TTL 总线舵机。
 

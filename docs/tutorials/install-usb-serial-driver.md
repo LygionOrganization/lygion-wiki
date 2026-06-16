@@ -1,5 +1,7 @@
 # 安装 USB 串口驱动
 
+![USB Connection](assets/t02.png){ .img-rounded }
+
 TTL Adapter (A) 使用 CH343 USB 转串口芯片。大多数新系统可以自动识别，但部分 Windows、Linux 或旧系统可能需要手动安装 CH343 / CH34X 驱动。
 
 ## 是否需要安装驱动
