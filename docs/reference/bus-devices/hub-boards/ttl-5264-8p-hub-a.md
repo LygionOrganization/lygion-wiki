@@ -1,6 +1,8 @@
 # TTL-5264 8P Hub (A)
 
-<a href="https://item.taobao.com/item.htm?id=992302020901&mi_id=00005xvuEkVThqyvzAXR2zey4FcNumPMojg9gLPn0hggn-8&spm=a21xtw.29178619.0.0&xxc=shop&skuId=5962530857774" target="_blank">淘宝购买链接</a>
+<a href="https://item.taobao.com/item.htm?id=992302020901&mi_id=00005xvuEkVThqyvzAXR2zey4FcNumPMojg9gLPn0hggn-8&spm=a21xtw.29178619.0.0&xxc=shop" target="_blank">淘宝购买链接</a>
+
+![HC-1.25 8P Hub (A)](assets/ttl-5264-8p-hub.webp){ .img-rounded width="360" }
 
 ### 产品定位
 
