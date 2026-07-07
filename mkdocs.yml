@@ -148,7 +148,11 @@ plugins:
                         - HC-1.25 8P Hub (A): reference/bus-devices/hub-boards/hc-1.25-8p-hub-a.md
                 - 机器人模组:
                     - reference/modules/index.md
-                    - 舵轮 SW69-TTL: reference/modules/sw69-ttl/index.md
+                    - 舵轮 SW69-TTL:
+                        - reference/modules/sw69-ttl/index.md
+                        - 快速上手与 FD 配置: reference/modules/sw69-ttl/quickstart.md
+                        - Python 程序开发: reference/modules/sw69-ttl/python-development.md
+                        - C++ / Arduino 程序开发: reference/modules/sw69-ttl/cpp-arduino.md
                     - 步进电机 4240BY-G5.2: reference/modules/4240by-g5-2/index.md
                     - 同步轮 3M 72T: reference/modules/pulley-3m-72t/index.md
                     - 驱动轮 DW69: reference/modules/dw69/index.md
@@ -281,7 +285,11 @@ plugins:
                         - FAQ: reference/bus-devices/robot-driver-with-esp32s3-lite/faq.md
                 - Robot Modules:
                     - reference/modules/index.md
-                    - SW69-TTL Steering Wheel Module: reference/modules/sw69-ttl/index.md
+                    - SW69-TTL Steering Wheel Module:
+                        - reference/modules/sw69-ttl/index.md
+                        - Quick Start and FD Setup: reference/modules/sw69-ttl/quickstart.md
+                        - Python Development: reference/modules/sw69-ttl/python-development.md
+                        - ESP32 Arduino Development: reference/modules/sw69-ttl/cpp-arduino.md
                     - 4240BY-G5.2 Stepper Motor: reference/modules/4240by-g5-2/index.md
                     - 3M 72T Timing Pulley: reference/modules/pulley-3m-72t/index.md
                     - DW69 Drive Wheel: reference/modules/dw69/index.md
