@@ -31,6 +31,7 @@ TTL Stepper Driver (A) controls a bipolar stepper motor over the single-wire TTL
 - [Hardware wiring](hardware-wiring.md)
 - [Operating modes](operating-modes.md)
 - [Motion and current parameters](parameters.md)
+- [Memory map and phase calculator](memory-map.md)
 - [Control with Python](python-quickstart.md)
 - [Control with C++ / Arduino](cpp-arduino.md)
 - [Limits, homing, and heartbeat protection](limits-homing-heartbeat.md)

@@ -35,6 +35,7 @@ TTL Stepper Driver (A) 是一款基于单线 TTL 总线通信的双极步进电�
 - [硬件接线](hardware-wiring.md)
 - [运行模式](operating-modes.md)
 - [参数说明](parameters.md)
+- [内存表与相位计算](memory-map.md)
 - [Python 控制](python-quickstart.md)
 - [C++ / Arduino](cpp-arduino.md)
 - [限位、回零与心跳保护](limits-homing-heartbeat.md)

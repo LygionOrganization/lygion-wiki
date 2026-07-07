@@ -111,6 +111,7 @@ plugins:
                         - 硬件接线: reference/bus-devices/ttl-stepper-driver-a/hardware-wiring.md
                         - 运行模式: reference/bus-devices/ttl-stepper-driver-a/operating-modes.md
                         - 参数说明: reference/bus-devices/ttl-stepper-driver-a/parameters.md
+                        - 内存表与相位计算: reference/bus-devices/ttl-stepper-driver-a/memory-map.md
                         - Python 控制: reference/bus-devices/ttl-stepper-driver-a/python-quickstart.md
                         - C++ / Arduino: reference/bus-devices/ttl-stepper-driver-a/cpp-arduino.md
                         - 限位、回零与心跳保护: reference/bus-devices/ttl-stepper-driver-a/limits-homing-heartbeat.md
@@ -248,6 +249,7 @@ plugins:
                         - Hardware Wiring: reference/bus-devices/ttl-stepper-driver-a/hardware-wiring.md
                         - Operating Modes: reference/bus-devices/ttl-stepper-driver-a/operating-modes.md
                         - Motion and Current Parameters: reference/bus-devices/ttl-stepper-driver-a/parameters.md
+                        - Memory Map and Phase Calculator: reference/bus-devices/ttl-stepper-driver-a/memory-map.md
                         - Python: reference/bus-devices/ttl-stepper-driver-a/python-quickstart.md
                         - C++ / Arduino: reference/bus-devices/ttl-stepper-driver-a/cpp-arduino.md
                         - Limits, Homing, and Heartbeat: reference/bus-devices/ttl-stepper-driver-a/limits-homing-heartbeat.md
@@ -378,3 +380,4 @@ extra_css:
 
 extra_javascript:
   - javascripts/language-redirect.js
+  - javascripts/ttlsd-phase-calculator.js
