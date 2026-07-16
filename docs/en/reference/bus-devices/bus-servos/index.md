@@ -15,10 +15,10 @@ This section covers the Feetech TTL serial bus servos commonly used in Lygion pr
 
 | Model | Image | 3D model |
 | --- | --- | --- |
-| SC-0090-C043 | ![SC-0090-C043](../../../reference/bus-devices/bus-servos/assets/SC-0090-C043.webp){ width="180" } | [Servo STEP](../../../reference/bus-devices/bus-servos/assets/SC-0090-C043.step) · [Round horn](../../../reference/bus-devices/bus-servos/assets/arms-0090/cycle.stp) · [Cross horn](../../../reference/bus-devices/bus-servos/assets/arms-0090/tenarm.stp) |
-| SC-0090-C049 | ![SC-0090-C049](../../../reference/bus-devices/bus-servos/assets/SC-0090-C049.webp){ width="180" } | [Servo STEP](../../../reference/bus-devices/bus-servos/assets/SC-0090-C049.step) · [Round horn](../../../reference/bus-devices/bus-servos/assets/arms-0090/cycle.stp) · [Cross horn](../../../reference/bus-devices/bus-servos/assets/arms-0090/tenarm.stp) |
-| SC-1500-C023 | ![SC-1500-C023](../../../reference/bus-devices/bus-servos/assets/SC-1500-C023.webp){ width="180" } | [Servo STEP](../../../reference/bus-devices/bus-servos/assets/SC-1500-C023.step) |
-| SC-1500-C024 | ![SC-1500-C024](../../../reference/bus-devices/bus-servos/assets/SC-1500-C024.webp){ width="180" } | [Servo STP](../../../reference/bus-devices/bus-servos/assets/SC-1500-C024.stp) |
+| SC-0090-C043 | ![SC-0090-C043](../../../../reference/bus-devices/bus-servos/assets/SC-0090-C043.webp){ width="180" } | [Servo STEP](../../../../reference/bus-devices/bus-servos/assets/SC-0090-C043.step){ download } · [Round horn](../../../../reference/bus-devices/bus-servos/assets/arms-0090/cycle.stp){ download } · [Cross horn](../../../../reference/bus-devices/bus-servos/assets/arms-0090/tenarm.stp){ download } |
+| SC-0090-C049 | ![SC-0090-C049](../../../../reference/bus-devices/bus-servos/assets/SC-0090-C049.webp){ width="180" } | [Servo STEP](../../../../reference/bus-devices/bus-servos/assets/SC-0090-C049.step){ download } · [Round horn](../../../../reference/bus-devices/bus-servos/assets/arms-0090/cycle.stp){ download } · [Cross horn](../../../../reference/bus-devices/bus-servos/assets/arms-0090/tenarm.stp){ download } |
+| SC-1500-C023 | ![SC-1500-C023](../../../../reference/bus-devices/bus-servos/assets/SC-1500-C023.webp){ width="180" } | [Servo STEP](../../../../reference/bus-devices/bus-servos/assets/SC-1500-C023.step){ download } |
+| SC-1500-C024 | ![SC-1500-C024](../../../../reference/bus-devices/bus-servos/assets/SC-1500-C024.webp){ width="180" } | [Servo STP](../../../../reference/bus-devices/bus-servos/assets/SC-1500-C024.stp){ download } |
 
 The 0090 series horn models include round, half-arm, single-arm, and cross horn options. See each model page for the full list.
 

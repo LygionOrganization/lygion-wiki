@@ -380,4 +380,5 @@ extra_css:
 
 extra_javascript:
   - javascripts/language-redirect.js
+  - javascripts/download-links.js
   - javascripts/ttlsd-phase-calculator.js

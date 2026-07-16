@@ -15,10 +15,10 @@
 
 | 产品 | 主图 | 3D 模型 |
 | --- | --- | --- |
-| SC-0090-C043 | ![SC-0090-C043](assets/SC-0090-C043.webp){ width="180" } | [舵机 STEP](assets/SC-0090-C043.step) · [圆形舵盘](assets/arms-0090/cycle.stp) · [十字舵盘](assets/arms-0090/tenarm.stp) |
-| SC-0090-C049 | ![SC-0090-C049](assets/SC-0090-C049.webp){ width="180" } | [舵机 STEP](assets/SC-0090-C049.step) · [圆形舵盘](assets/arms-0090/cycle.stp) · [十字舵盘](assets/arms-0090/tenarm.stp) |
-| SC-1500-C023 | ![SC-1500-C023](assets/SC-1500-C023.webp){ width="180" } | [舵机 STEP](assets/SC-1500-C023.step) |
-| SC-1500-C024 | ![SC-1500-C024](assets/SC-1500-C024.webp){ width="180" } | [舵机 STP](assets/SC-1500-C024.stp) |
+| SC-0090-C043 | ![SC-0090-C043](assets/SC-0090-C043.webp){ width="180" } | [舵机 STEP](assets/SC-0090-C043.step){ download } · [圆形舵盘](assets/arms-0090/cycle.stp){ download } · [十字舵盘](assets/arms-0090/tenarm.stp){ download } |
+| SC-0090-C049 | ![SC-0090-C049](assets/SC-0090-C049.webp){ width="180" } | [舵机 STEP](assets/SC-0090-C049.step){ download } · [圆形舵盘](assets/arms-0090/cycle.stp){ download } · [十字舵盘](assets/arms-0090/tenarm.stp){ download } |
+| SC-1500-C023 | ![SC-1500-C023](assets/SC-1500-C023.webp){ width="180" } | [舵机 STEP](assets/SC-1500-C023.step){ download } |
+| SC-1500-C024 | ![SC-1500-C024](assets/SC-1500-C024.webp){ width="180" } | [舵机 STP](assets/SC-1500-C024.stp){ download } |
 
 0090 系列舵盘模型包括圆形、半臂、单臂和十字舵盘，详见具体型号页面。
 
