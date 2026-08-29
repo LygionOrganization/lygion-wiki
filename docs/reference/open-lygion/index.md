@@ -15,8 +15,10 @@
 
 | 项目 | 资料 |
 | --- | --- |
+| [3D3S 全向底盘](3d3s-chassis.md) | 全向底盘结构项目，提供 STEP 模型。 |
 | [6x6 Rover](6x6-rover.md) | 六轮移动底盘，提供项目图片和压缩模型资料。 |
 | [5+1 DOF Robotic Arm](5-plus-1-dof-robotic-arm.md) | 5+1 自由度机械臂，提供 STEP 模型。 |
+| [Open Leader Arm](open-leader-arm.md) | 开源机械臂结构项目，提供 STEP 模型。 |
 | [Self-locking Gripper](self-locking-gripper.md) | 自锁夹爪机构，提供 STEP 模型。 |
 
 !!! tip "第一次使用建议"

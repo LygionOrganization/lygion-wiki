@@ -15,8 +15,10 @@ This section collects public Lygion SDKs, example projects, and mechanical resou
 
 | Project | Resource |
 | --- | --- |
+| [3D3S Omnidirectional Chassis](3d3s-chassis.md) | Omnidirectional chassis structure with a downloadable STEP model. |
 | [6x6 Rover](6x6-rover.md) | Six-wheel mobile platform with downloadable model package. |
 | [5+1 DOF Robotic Arm](5-plus-1-dof-robotic-arm.md) | 5+1 DOF robotic arm structure with STEP model. |
+| [Open Leader Arm](open-leader-arm.md) | Open robotic-arm structure with a downloadable STEP model. |
 | [Self-locking Gripper](self-locking-gripper.md) | Self-locking end-effector mechanism with STEP model. |
 
 !!! tip "Start with the fundamentals"

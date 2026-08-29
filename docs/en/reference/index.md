@@ -35,8 +35,10 @@ Use this section after completing a [first communication test](../quickstart/ind
 
 - [Python SDK](open-lygion/python-sdk.md)
 - [C++ SDK](open-lygion/cpp-sdk.md)
+- [3D3S Omnidirectional Chassis](open-lygion/3d3s-chassis.md)
 - [6x6 Rover](open-lygion/6x6-rover.md)
 - [5+1 DOF Robotic Arm](open-lygion/5-plus-1-dof-robotic-arm.md)
+- [Open Leader Arm](open-lygion/open-leader-arm.md)
 - [Self-locking Gripper](open-lygion/self-locking-gripper.md)
 
 ## Before Integrating a Product

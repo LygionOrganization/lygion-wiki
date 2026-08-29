@@ -38,8 +38,10 @@ This page collects SDKs, utilities, CAD files, and project resources referenced 
 
 | Project | File |
 | --- | --- |
+| 3D3S Omnidirectional Chassis | [3D3S_Chassis.step](../../reference/open-lygion/assets/3D3S_Chassis.step) |
 | 6x6 Rover | [6x6-rover.zip](../../reference/open-lygion/assets/6x6-rover.zip) |
 | 5+1 DOF Robotic Arm | [5-plus-1-dof-robotic-arm.step](../../reference/open-lygion/assets/5-plus-1-dof-robotic-arm.step) |
+| Open Leader Arm | [open_leader_arm.step](../../reference/open-lygion/assets/open_leader_arm.step) |
 | Self-locking Gripper | [self-locking-gripper.step](../../reference/open-lygion/assets/self-locking-gripper.step) |
 | OpenLygion 4WD AL | [OpenLygion 4WD AL.step](<../../reference/open-lygion/assets/OpenLygion 4WD AL.step>) |
 | OpenLygion 4WD SheetMetal | [OpenLygion 4WD SheetMetal.step](<../../reference/open-lygion/assets/OpenLygion 4WD SheetMetal.step>) |

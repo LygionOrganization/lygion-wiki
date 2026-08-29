@@ -184,8 +184,10 @@ plugins:
                     - reference/open-lygion/index.md
                     - Python SDK: reference/open-lygion/python-sdk.md
                     - C++ SDK: reference/open-lygion/cpp-sdk.md
+                    - 3D3S 全向底盘: reference/open-lygion/3d3s-chassis.md
                     - 6x6 Rover: reference/open-lygion/6x6-rover.md
                     - 5+1 DOF Robotic Arm: reference/open-lygion/5-plus-1-dof-robotic-arm.md
+                    - Open Leader Arm: reference/open-lygion/open-leader-arm.md
                     - self-locking-gripper: reference/open-lygion/self-locking-gripper.md
             - 下载中心: downloads/index.md
         - locale: en
@@ -322,8 +324,10 @@ plugins:
                     - reference/open-lygion/index.md
                     - Python SDK: reference/open-lygion/python-sdk.md
                     - C++ SDK: reference/open-lygion/cpp-sdk.md
+                    - 3D3S Omnidirectional Chassis: reference/open-lygion/3d3s-chassis.md
                     - 6x6 Rover: reference/open-lygion/6x6-rover.md
                     - 5+1 DOF Robotic Arm: reference/open-lygion/5-plus-1-dof-robotic-arm.md
+                    - Open Leader Arm: reference/open-lygion/open-leader-arm.md
                     - Self-locking Gripper: reference/open-lygion/self-locking-gripper.md
             - Downloads: downloads/index.md
 
