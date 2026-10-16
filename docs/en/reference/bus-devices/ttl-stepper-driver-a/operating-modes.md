@@ -10,8 +10,8 @@ The driver supports position control, continuous-speed control, and low-level ED
 
 Use FD or the EEPROM programming examples to change the operating mode.
 
-!!! warning "Disconnect EDS before changing modes"
-    Disconnect the EDS interface before changing an operating mode. Power-cycle the driver after changing the mode.
+!!! note "Mode switching and phase changes are different"
+    Follow the EDS wiring procedure when configuring follower operation. Modes 0 (position) and 1 (continuous speed) can be switched freely during a single power session without restarting. A restart is required only after changing phase configuration.
 
 ## Position Mode
 

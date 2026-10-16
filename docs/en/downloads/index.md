@@ -1,6 +1,6 @@
 # Downloads
 
-This page collects SDKs, utilities, CAD files, and project resources referenced throughout the documentation. Product-specific images, CAD files, and examples are still maintained in each product's `assets/` directory; this page provides the common entry points.
+This page collects SDKs, utilities, CAD files, and project resources referenced throughout the documentation. Choose a product below for its images, CAD files, software and examples.
 
 ## SDKs and Utilities
 
@@ -55,4 +55,4 @@ This page collects SDKs, utilities, CAD files, and project resources referenced 
 - [Tutorials](../tutorials/index.md)
 
 !!! note "Single source for CAD files"
-    STEP, STP, ZIP, and other model files are maintained once in each product's `assets/` directory. The Chinese and English download pages both link to those shared files to avoid version drift.
+    Choose the model format required by your CAD software. Product pages provide the corresponding dimensions and assembly guidance.

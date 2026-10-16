@@ -12,7 +12,7 @@ USB CDC、HTTP 和 WebSocket 都使用相同的 JSON 指令。选择通信方式
 
 ## 获取示例项目
 
-- [GitHub 项目](https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite)
+- [GitHub 项目](https://github.com/LygionOrganization/robocore_s3)
 
 === "Windows"
 
@@ -23,8 +23,8 @@ USB CDC、HTTP 和 WebSocket 都使用相同的 JSON 指令。选择通信方式
 === "macOS"
 
     ```bash
-    git clone https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite.git
-    cd robot_driver_with_esp32s3_lite
+    git clone https://github.com/LygionOrganization/robocore_s3.git
+    cd robocore_s3
     ```
 
 === "Linux"
@@ -32,8 +32,8 @@ USB CDC、HTTP 和 WebSocket 都使用相同的 JSON 指令。选择通信方式
     ```bash
     sudo apt update
     sudo apt install git
-    git clone https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite.git
-    cd robot_driver_with_esp32s3_lite
+    git clone https://github.com/LygionOrganization/robocore_s3.git
+    cd robocore_s3
     ```
 
 ## 创建 Python 环境

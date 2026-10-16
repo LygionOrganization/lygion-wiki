@@ -74,6 +74,6 @@ LinkArm-LT 是一款可通过浏览器直接控制、支持动作脚本与多种
 
 ## 开源资源
 
-- [Robot Driver with ESP32S3 Lite 源码与上位机示例](https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite)
+- [Robot Driver with ESP32S3 Lite 源码与上位机示例](https://github.com/LygionOrganization/robocore_s3)
 - [Robot Driver with ESP32S3 Lite 产品 Wiki](../../bus-devices/robot-driver-with-esp32s3-lite/index.md)
 - [TTL Node (A) 产品 Wiki](../../bus-devices/ttl-node-a/index.md)

@@ -10,7 +10,7 @@ LinkArm-LT 支持 USB CDC、HTTP 和 WebSocket。三种方式发送相同的 JSO
 | HTTP | Wi-Fi | 约 40 条/秒 | API 简单、跨平台 | 任务下发、普通控制 |
 | WebSocket | Wi-Fi | 60 条/秒以上 | 长连接、双向推送 | 实时控制、状态反馈 |
 
-示例项目：[robot_driver_with_esp32s3_lite](https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite)
+示例项目：[robot_driver_with_esp32s3_lite](https://github.com/LygionOrganization/robocore_s3)
 
 ## Python 环境
 

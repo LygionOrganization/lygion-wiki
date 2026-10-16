@@ -8,7 +8,7 @@ Robot Driver with ESP32S3 Lite 的完整固件使用 Arduino 框架，推荐通�
 
 ## 获取项目
 
-- [robot_driver_with_esp32s3_lite 开源项目](https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite)
+- [robocore_s3 开源项目](https://github.com/LygionOrganization/robocore_s3)
 
 下载或克隆后，应打开包含 `platformio.ini` 的项目根目录，不要只打开 `src`。
 

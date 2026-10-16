@@ -125,6 +125,38 @@ plugins:
                         - 使用 FD 配置: reference/bus-devices/ttl-node-a/fd-configuration.md
                         - Arduino 开发: reference/bus-devices/ttl-node-a/arduino-development.md
                         - SDK 与工具: reference/bus-devices/ttl-node-a/sdk-and-tools.md
+                    - RoboCore S3:
+                        - reference/bus-devices/robocore-s3/index.md
+                        - 快速开始: reference/bus-devices/robocore-s3/quickstart.md
+                        - 供电与接口: reference/bus-devices/robocore-s3/hardware.md
+                        - 网页控制台: reference/bus-devices/robocore-s3/web-console.md
+                        - 总线设备控制: reference/bus-devices/robocore-s3/devices.md
+                        - JSON 接口: reference/bus-devices/robocore-s3/json-api.md
+                        - 网页自动化脚本: reference/bus-devices/robocore-s3/automation.md
+                        - 电脑/上位机控制: reference/bus-devices/robocore-s3/python.md
+                        - Arduino 单元例程:
+                            - 例程总览: reference/bus-devices/robocore-s3/arduino.md
+                            - "总线 ID 扫描": reference/bus-devices/robocore-s3/arduino/bus-scan.md
+                            - "CAN 外部通信": reference/bus-devices/robocore-s3/arduino/can-communication.md
+                            - "ESP-NOW 无线 JSON": reference/bus-devices/robocore-s3/arduino/esp-now-json.md
+                            - "HLS 总线舵机": reference/bus-devices/robocore-s3/arduino/hls-servo.md
+                            - "HTTP JSON 通信": reference/bus-devices/robocore-s3/arduino/http-json.md
+                            - "外接 OLED 显示": reference/bus-devices/robocore-s3/arduino/oled.md
+                            - "板载惯性传感器 QMI8658A": reference/bus-devices/robocore-s3/arduino/qmi8658a.md
+                            - "外接 RGB 与蜂鸣器（可选接线）": reference/bus-devices/robocore-s3/arduino/rgb-buzzer.md
+                            - "外部 RS485 通信": reference/bus-devices/robocore-s3/arduino/rs485-communication.md
+                            - "SCS 总线舵机": reference/bus-devices/robocore-s3/arduino/scs-servo.md
+                            - "SMS 总线舵机": reference/bus-devices/robocore-s3/arduino/sms-servo.md
+                            - "STS 总线舵机": reference/bus-devices/robocore-s3/arduino/sts-servo.md
+                            - "TTL 编码器 E02": reference/bus-devices/robocore-s3/arduino/ttl-encoder.md
+                            - "TTL Node：PWM、RGB 与 S.BUS": reference/bus-devices/robocore-s3/arduino/ttl-node.md
+                            - "TTL 步进驱动": reference/bus-devices/robocore-s3/arduino/ttl-stepper.md
+                            - "原生 USB CDC JSON 通信": reference/bus-devices/robocore-s3/arduino/usb-cdc-json.md
+                            - "User Interface Module (A)：按键、蜂鸣器和屏幕": reference/bus-devices/robocore-s3/arduino/user-interface-module-a.md
+                            - "WebSocket JSON 通信": reference/bus-devices/robocore-s3/arduino/websocket-json.md
+                        - 固件恢复: reference/bus-devices/robocore-s3/firmware.md
+                        - AI 辅助开发: reference/bus-devices/robocore-s3/ai-development.md
+                        - 故障排查: reference/bus-devices/robocore-s3/faq.md
                     - Robot Driver with ESP32S3 Lite:
                         - reference/bus-devices/robot-driver-with-esp32s3-lite/index.md
                         - 快速开始: reference/bus-devices/robot-driver-with-esp32s3-lite/quickstart.md
@@ -274,6 +306,38 @@ plugins:
                     - Bus Hubs:
                         - TTL-5264 8P Hub (A): reference/bus-devices/hub-boards/ttl-5264-8p-hub-a.md
                         - HC-1.25 8P Hub (A): reference/bus-devices/hub-boards/hc-1.25-8p-hub-a.md
+                    - RoboCore S3:
+                        - reference/bus-devices/robocore-s3/index.md
+                        - Quick Start: reference/bus-devices/robocore-s3/quickstart.md
+                        - Power and Wiring: reference/bus-devices/robocore-s3/hardware.md
+                        - Web Console: reference/bus-devices/robocore-s3/web-console.md
+                        - Bus Devices: reference/bus-devices/robocore-s3/devices.md
+                        - JSON API: reference/bus-devices/robocore-s3/json-api.md
+                        - Web Automation: reference/bus-devices/robocore-s3/automation.md
+                        - PC / Host Control: reference/bus-devices/robocore-s3/python.md
+                        - Arduino Examples:
+                            - Overview: reference/bus-devices/robocore-s3/arduino.md
+                            - "Bus ID scan": reference/bus-devices/robocore-s3/arduino/bus-scan.md
+                            - "External CAN communication": reference/bus-devices/robocore-s3/arduino/can-communication.md
+                            - "ESP-NOW wireless JSON": reference/bus-devices/robocore-s3/arduino/esp-now-json.md
+                            - "HLS bus servo": reference/bus-devices/robocore-s3/arduino/hls-servo.md
+                            - "HTTP JSON communication": reference/bus-devices/robocore-s3/arduino/http-json.md
+                            - "External OLED display": reference/bus-devices/robocore-s3/arduino/oled.md
+                            - "Onboard QMI8658A onboard IMU": reference/bus-devices/robocore-s3/arduino/qmi8658a.md
+                            - "External RGB and buzzer (optional wiring)": reference/bus-devices/robocore-s3/arduino/rgb-buzzer.md
+                            - "External RS485 communication": reference/bus-devices/robocore-s3/arduino/rs485-communication.md
+                            - "SCS bus servo": reference/bus-devices/robocore-s3/arduino/scs-servo.md
+                            - "SMS bus servo": reference/bus-devices/robocore-s3/arduino/sms-servo.md
+                            - "STS bus servo": reference/bus-devices/robocore-s3/arduino/sts-servo.md
+                            - "TTL Encoder E02": reference/bus-devices/robocore-s3/arduino/ttl-encoder.md
+                            - "TTL Node: PWM, RGB and S.BUS": reference/bus-devices/robocore-s3/arduino/ttl-node.md
+                            - "TTL stepper driver": reference/bus-devices/robocore-s3/arduino/ttl-stepper.md
+                            - "Native USB CDC JSON communication": reference/bus-devices/robocore-s3/arduino/usb-cdc-json.md
+                            - "User Interface Module (A): keys, buzzer and display": reference/bus-devices/robocore-s3/arduino/user-interface-module-a.md
+                            - "WebSocket JSON communication": reference/bus-devices/robocore-s3/arduino/websocket-json.md
+                        - Firmware Recovery: reference/bus-devices/robocore-s3/firmware.md
+                        - AI Development: reference/bus-devices/robocore-s3/ai-development.md
+                        - Troubleshooting: reference/bus-devices/robocore-s3/faq.md
                     - Robot Driver with ESP32S3 Lite:
                         - reference/bus-devices/robot-driver-with-esp32s3-lite/index.md
                         - Quick Start: reference/bus-devices/robot-driver-with-esp32s3-lite/quickstart.md
@@ -360,6 +424,7 @@ validation:
   anchors: warn
 
 not_in_nav: |
+  assets/files/robocore-s3/AGENTS.md
   en/reference/bus-devices/robot-driver-with-esp32s3-lite/http-wireless-communication.md
   en/reference/bus-devices/robot-driver-with-esp32s3-lite/sbus-development.md
   en/reference/bus-devices/robot-driver-with-esp32s3-lite/usb-cdc-wired-communication.md

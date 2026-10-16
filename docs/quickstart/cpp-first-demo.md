@@ -57,7 +57,7 @@ TTL Encoder E02 / TTL Stepper Driver (A) / Other TTL Bus Device
 你需要准备：
 
 - 一个支持 Arduino 开发环境的 MCU 开发板
-    - 推荐使用 [Lygion Robot Driver](../reference/bus-devices/robot-driver-with-esp32s3-lite/index.md)，ESP32S3主控板载 UART 转单线 TTL 总线电路
+    - 推荐使用 [RoboCore S3](../reference/bus-devices/robocore-s3/index.md)，ESP32S3主控板载 UART 转单线 TTL 总线电路
 - [TTL Adapter (A)](../reference/bus-devices/ttl-adapter-a/index.md)，或其它 UART 转单线 TTL 总线电路
 - 一个 TTL 总线设备，例如TTL Stepper Driver (A)、TTL Encoder E02、或飞特总线舵机
 - USB 数据线，用于连接电脑和 MCU（取决于你所使用的 MCU 的下载固件方式）

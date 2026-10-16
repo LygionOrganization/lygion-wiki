@@ -11,6 +11,7 @@
 | 电机驱动 | TTL Stepper Driver (A) | 通过 TTL 总线控制步进电机的位置、速度和参数 | [查看文档](ttl-stepper-driver-a/index.md) |
 | 多功能节点 | TTL Node (A) | S.BUS、RGB、PWM、ADC、USB 和 TTL 总线桥接 | [查看文档](ttl-node-a/index.md) |
 | 执行器 | 总线舵机 | 飞特 TTL 串行总线舵机，适合关节、夹爪和云台机构 | [查看文档](bus-servos/index.md) |
+| 控制板 | RoboCore S3 | 紧凑型 5–48V 主控、板载 IMU、网页总线设备控制 | [查看文档](robocore-s3/index.md) |
 | 控制板 | Robot Driver with ESP32S3 Lite | 可用做机器人下位机，机器人动作脚本、Web 控制台、舵机和外设控制 | [查看文档](robot-driver-with-esp32s3-lite/index.md) |
 | 接线扩展 | 总线集线板 | 扩展多路 TTL 总线设备接入和供电分配 | [TTL-5264](hub-boards/ttl-5264-8p-hub-a.md) · [HC-1.25](hub-boards/hc-1.25-8p-hub-a.md) |
 

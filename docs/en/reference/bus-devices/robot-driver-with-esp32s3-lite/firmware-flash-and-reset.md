@@ -1,8 +1,10 @@
 # Firmware Flashing and Reset
 
+Download the [complete Windows tool package](../../../assets/files/robocore-s3/download-tool.zip), extract it, and open `Start_Download_Tool.bat`. It contains matching images and preset addresses for RoboCore S3 and Robot Driver with ESP32S3 Lite. Choose the actual COM port manually; no automatic flashing is enabled. The package includes bilingual instructions, `manifest.json` and a read-only `Verify_Package.ps1` checksum check. After flashing, reset the board and check the console before reconnecting actuators.
+
 Use the official repository for prebuilt firmware, the Windows download tool, and the PlatformIO source project:
 
-[Robot Driver with ESP32S3 Lite firmware repository](https://github.com/LygionOrganization/robot_driver_with_esp32s3_lite)
+[Robot Driver with ESP32S3 Lite firmware repository](https://github.com/LygionOrganization/robocore_s3)
 
 ## Before Flashing
 
@@ -16,7 +18,7 @@ Use the official repository for prebuilt firmware, the Windows download tool, an
 The official repository contains:
 
 ```text
-download_tool/RD_ESP32S3_LITE_Download_Tool/
+download_tool/RoboCore_S3_Download_Tool/
 ```
 
 This folder includes Espressif Flash Download Tool 3.9.9 and matching bootloader, partition, and firmware binaries.

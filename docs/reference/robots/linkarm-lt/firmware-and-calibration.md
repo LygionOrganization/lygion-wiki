@@ -7,7 +7,7 @@
 
 ## 准备文件
 
-1. 下载 [robot_driver_with_esp32s3_lite](https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite) 项目。
+1. 下载 [robot_driver_with_esp32s3_lite](https://github.com/LygionOrganization/robocore_s3) 项目。
 2. 解压项目。
 3. 打开 `download_tool/LinkArm_LT_Download_Tool`。
 4. 准备 Windows 电脑和支持数据传输的 USB Type-C 线。

@@ -11,6 +11,7 @@ Lygion TTL bus products share a single-wire half-duplex TTL bus. A controller ca
 | Motor driver | TTL Stepper Driver (A) | Position, speed, and parameter control for stepper motors over TTL bus | [Open guide](ttl-stepper-driver-a/index.md) |
 | Multifunction node | TTL Node (A) | S.BUS, RGB, PWM, ADC, USB, and TTL-bus bridging | [Open guide](ttl-node-a/index.md) |
 | Actuator | TTL Bus Servos | Feetech TTL serial bus servos for joints, grippers, and pan-tilt mechanisms | [Open guide](bus-servos/index.md) |
+| Controller | RoboCore S3 | Compact 5–48V controller, onboard IMU and Web device tools | [Open guide](robocore-s3/index.md) |
 | Controller | Robot Driver with ESP32S3 Lite | Robot action scripts, Web console, servo control, and onboard peripherals | [Open guide](robot-driver-with-esp32s3-lite/index.md) |
 | Wiring expansion | Bus hubs | Expanding TTL bus wiring and power distribution | [TTL-5264](hub-boards/ttl-5264-8p-hub-a.md) · [HC-1.25](hub-boards/hc-1.25-8p-hub-a.md) |
 

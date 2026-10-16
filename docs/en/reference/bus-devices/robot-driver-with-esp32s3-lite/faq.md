@@ -43,4 +43,4 @@ Clearing NVS removes saved configuration. Resetting LittleFS removes mission fil
 
 ## Where is the authoritative command list?
 
-See `src/Config.h` in the [official firmware repository](https://github.com/LygionOrganization/robot_driver_with_esp32s3_lite).
+See `src/Config.h` in the [official firmware repository](https://github.com/LygionOrganization/robocore_s3).

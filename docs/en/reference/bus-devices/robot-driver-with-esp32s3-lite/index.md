@@ -1,5 +1,7 @@
 # Robot Driver with ESP32S3 Lite
 
+The firmware repository is now named **[robocore_s3](https://github.com/LygionOrganization/robocore_s3)** and supports both RoboCore S3 and Robot Driver with ESP32S3 Lite. Lite users should continue to follow this guide for board-specific power and wiring.
+
 Robot Driver with ESP32S3 Lite is an ESP32-S3 robot controller that can run robot logic independently or serve as a real-time sub-controller for a Raspberry Pi, Jetson, PC, or other host.
 
 ![Robot Driver with ESP32S3 Lite](assets/product.jpg){ .img-rounded width="500" }
@@ -51,7 +53,7 @@ Robot Driver with ESP32S3 Lite is an ESP32-S3 robot controller that can run robo
 
 ## Open-Source Firmware
 
-[Robot Driver with ESP32S3 Lite firmware and examples](https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite)
+[Robot Driver with ESP32S3 Lite firmware and examples](https://github.com/LygionOrganization/robocore_s3)
 
 !!! warning "Match the supply to every actuator"
     The DC5521 and XT30 power rails feed the actuator interfaces. Verify the voltage rating of every servo, joint, and hub motor before applying power.

@@ -1,5 +1,7 @@
 # 固件恢复
 
+下载[完整 Windows 下载工具包](../../../assets/files/robocore-s3/download-tool.zip)，完整解压后运行 `Start_Download_Tool.bat`。工具包适用于 RoboCore S3 和 Robot Driver with ESP32S3 Lite，包含同次构建的镜像和预设地址；需手动选择 COM 端口，不会自动烧录。包内附中英文说明、`manifest.json` 和只读校验脚本 `Verify_Package.ps1`。实机烧录效果仍需硬件验证。
+
 当文件系统损坏、固件无法启动或需要恢复出厂程序时，可以使用项目内的下载工具重新刷写固件。
 
 !!! danger "刷机前断开执行器"
@@ -7,10 +9,10 @@
 
 ## 下载工具
 
-1. 打开[开源项目](https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite)。
+1. 打开[开源项目](https://github.com/LygionOrganization/robocore_s3)。
 2. 点击 `Code` → `Download ZIP`。
 3. 解压项目。
-4. 进入 `download_tool/RD_ESP32S3_LITE_Download_Tools`。
+4. 进入 `download_tool/RoboCore_S3_Download_Tool`。
 
 当前资料包提供的是 Espressif Windows 图形化下载工具流程。
 

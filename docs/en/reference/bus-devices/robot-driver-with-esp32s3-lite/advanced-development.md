@@ -2,7 +2,7 @@
 
 The official firmware is an Arduino-framework PlatformIO project for ESP32-S3-N8R8:
 
-[Open the firmware repository](https://github.com/LygionOrganization/robot_driver_with_esp32s3_lite)
+[Open the firmware repository](https://github.com/LygionOrganization/robocore_s3)
 
 ## Project Structure
 

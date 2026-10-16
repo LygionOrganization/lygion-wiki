@@ -1,5 +1,7 @@
 # Robot Driver with ESP32S3 Lite
 
+固件项目现已更名为 **[robocore_s3](https://github.com/LygionOrganization/robocore_s3)**，同时适用于 RoboCore S3 和 Robot Driver with ESP32S3 Lite。Lite 用户请继续按本教程中的供电与接线说明使用。
+
 <a href="https://item.taobao.com/item.htm?id=976100303360&mi_id=0000-71ipVAVfFB4OuwgzhdKnbhj47k9pP_8CMr_JP1eQgw&spm=a21xtw.29178619.0.0&xxc=shop" target="_blank">淘宝购买链接</a>
 
 
@@ -71,7 +73,7 @@ Robot Driver with ESP32S3 Lite 是一款面向机器人项目的 ESP32-S3 控制
 
 ## 开源项目
 
-- [Robot Driver with ESP32S3 Lite 固件与示例](https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite)
+- [Robot Driver with ESP32S3 Lite 固件与示例](https://github.com/LygionOrganization/robocore_s3)
 
 !!! warning "供电安全"
     DC5521 和 XT30(2+2) 的电源会直接供给执行器接口。接通电源前，必须确认输入电压与全部舵机、关节和轮毂电机兼容。

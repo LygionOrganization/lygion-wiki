@@ -44,7 +44,10 @@ ttlsd.WritePosEx(1, 3200, 200, 10, 150);
 ## Speed Control
 
 ```cpp
-ttlsd.WheelMode(1);
+ttlsd.unLockEprom(1);
+ttlsd.SetMode(1, 1); // Continuous-speed mode; no restart required.
+ttlsd.LockEprom(1);
+ttlsd.EnableTorque(1, 1);
 ttlsd.WriteSpe(1, 100, 10, 150);
 delay(2000);
 ttlsd.WriteSpe(1, 0, 10, 150);

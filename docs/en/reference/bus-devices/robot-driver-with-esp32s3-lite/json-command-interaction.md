@@ -67,4 +67,4 @@ Use the same JSON objects through:
 !!! warning "Validate IDs, limits, and motion values"
     JSON commands are executed by the board. Start with feedback, display, and low-speed commands before enabling automatic or broadcast motion.
 
-The authoritative command list is defined in `src/Config.h` of the [official firmware repository](https://github.com/LygionOrganization/robot_driver_with_esp32s3_lite).
+The authoritative command list is defined in `src/Config.h` of the [official firmware repository](https://github.com/LygionOrganization/robocore_s3).

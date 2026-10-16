@@ -11,7 +11,7 @@ The controller accepts newline-delimited JSON commands through USB CDC, HTTP, an
 Clone the firmware repository for current host examples:
 
 ```bash
-git clone https://github.com/EffectsMachine/robot_driver_with_esp32s3_lite.git
+git clone https://github.com/LygionOrganization/robocore_s3.git
 ```
 
 ## USB CDC
