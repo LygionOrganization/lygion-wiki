@@ -20,7 +20,7 @@ RoboCore S3 完整固件使用人类可读的 JSON 指令控制设备。下文�
 
 ## 通用参数与使用顺序
 
-JSON 的字段名区分大小写。表格中的示例是完整对象；按实际设备修改 ID、位置和速度后再发送。除明确标为可选的参数外，请填写示例中的全部字段。旧舵机/机械臂接口保留原协议，不具备总线设备接口的全面参数校验，不能依靠固件替你检查机械行程。同步接口会校验数组长度、ID唯一性、位置范围与数值类型；SCS位置0–1023，其他同步位置0–4095。
+JSON 的字段名区分大小写。表格中的示例是完整对象；按实际设备修改 ID、位置和速度后再发送。除明确标为可选的参数外，请填写示例中的全部字段。舵机与机械臂指令的参数范围因型号和机构而异，发送前应核对目标设备及机械行程。同步接口会校验数组长度、ID唯一性、位置范围与数值类型；SCS位置0–1023，其他同步位置0–4095。
 
 | 字段 | 含义与单位 |
 | --- | --- |
@@ -65,9 +65,9 @@ JSON 的字段名区分大小写。表格中的示例是完整对象；按实际
 
 | 操作 | 发送 | 接收示例 |
 | --- | --- | --- |
-| Scan | `{"T":700,"first":0,"last":20,"rid":1}` | `{"T":700,"rid":1,"ok":true,"ids":[1,5],"first":0,"last":20}` |
-| Encoder | `{"T":732,"id":1,"rid":2}` | `{"T":732,"rid":2,"id":1,"ok":true,"bus_error":0,"device_status":0,"pos":2048,"speed":0}` |
-| IMU unavailable | `{"T":740,"rid":3}` | `{"T":740,"rid":3,"ok":false,"present":false,"error":"imu_not_present"}` |
+| 扫描设备 | `{"T":700,"first":0,"last":20,"rid":1}` | `{"T":700,"rid":1,"ok":true,"ids":[1,5],"first":0,"last":20}` |
+| 读取编码器 | `{"T":732,"id":1,"rid":2}` | `{"T":732,"rid":2,"id":1,"ok":true,"bus_error":0,"reply_status":0,"pos":2048,"speed":0}` |
+| IMU 不可用 | `{"T":740,"rid":3}` | `{"T":740,"rid":3,"ok":false,"present":false,"error":"imu_not_present"}` |
 
 `ok:false` 表示参数或设备通信失败。部分指令返回 `dispatched:true`，只表示处理器已完成分发，不代表电机动作成功。设备 ID 设置 T=13/23/33/710/720 会检查新 ID；编码器与步进驱动共用 T=720。
 
@@ -77,6 +77,28 @@ JSON 的字段名区分大小写。表格中的示例是完整对象；按实际
 | --- | --- |
 | GET /api/info | 固件、总线波特率、IMU、任务状态，以及 sta_state、sta_ip、ap_ip、sta_ssid；无密码 |
 | GET /api/result | 最新一条执行结果，通过 rid 匹配；不保存历史 |
+| GET /api/imu | 板载 IMU 最新有效快照；只读，不进入指令队列，字段见下文 |
+
+## IMU 反馈（T=740 / GET /api/imu）
+
+`GET /api/imu` 直接返回只读快照，不进入指令队列。单次指令发送 `{"T":740,"rid":1}`，成功接收格式如下（数值仅为示例）：
+
+```json
+{"T":740,"rid":1,"ok":true,"present":true,"address":106,"sample_age_ms":2,"sample_count":123,"temperature_c":25.0,"accel_g":[0,0,1],"gyro_dps":[0,0,0]}
+```
+
+| 字段 | 含义 |
+| --- | --- |
+| `present` / `address` | 是否检测到传感器 / 十进制 I2C 地址 |
+| `accel_g` / `gyro_dps` | X、Y、Z 轴加速度（g）/ 角速度（度/秒）|
+| `temperature_c` | 传感器温度（℃）|
+| `sample_count` | 24 位循环样本计数；相同计数表示同一份样本 |
+| `sample_age_ms` | 缓存样本距今的毫秒数；无有效样本为 -1 |
+| `ok` / `error` | 仅在 ok=true 时使用测量值；超过 100 ms 的旧样本返回 imu_no_fresh_sample |
+
+实时读取应逐次等待响应，建议每秒约 10 次或更低，不保存请求历史。网页估算横滚、俯仰和相对航向；六轴 IMU 不提供绝对航向。
+
+T=723/732 的 reply_status 表示位置和速度读取回复中的合并状态标志。T=723 的 device_status 来自实际驱动状态寄存器，device_fault、current_limited、limit_active、target_out_of_range 分别表示故障、限流、限位和目标越界；限流不等于故障。
 
 <!-- COMMAND_TABLES -->
 

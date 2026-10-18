@@ -9,7 +9,7 @@ See [Web automation scripts](automation.md) for editing, saving and running miss
 
 ## Common fields and operating sequence
 
-JSON field names are case-sensitive. Examples are complete objects: change IDs, positions and speeds for your hardware before sending. Supply all shown fields unless explicitly optional. Legacy servo/arm interfaces retain their original protocol and lack the new bus API’s comprehensive validation; check mechanical travel yourself. Sync commands validate array lengths, unique IDs, numeric types and positions (SCS0–1023, other sync families0–4095).
+JSON field names are case-sensitive. Examples are complete objects: change IDs, positions and speeds for your hardware before sending. Supply all shown fields unless explicitly optional. Servo and arm parameter limits depend on the device model and mechanism; check the target hardware and mechanical travel before sending commands. Sync commands validate array lengths, unique IDs, numeric types and positions (SCS0–1023, other sync families0–4095).
 
 | Field | Meaning and units |
 | --- | --- |
@@ -36,7 +36,7 @@ JSON field names are case-sensitive. Examples are complete objects: change IDs, 
 | `flag / hz` | T=145 periodic arm feedback0/1 and frequency; unrelated to T=740 onboard IMU readings |
 | `flag / axis / delta` | T=146 continuous-motion enable0/1, preset coordinate axis and increment; only for the matching arm application |
 
-Scan with T=700, read model-specific feedback, then try low-speed movement within limits. TTL and servo RS485 share IO4/IO5 baud and data; they are not separate UARTs. External CAN/RS485 uses IO13/IO14 and requires both the correct selector position and matching program.
+Scan with T=700, read model-specific feedback, then try low-speed movement within limits. TTL and bus-device RS485 share IO4/IO5 baud and data; they are not separate UARTs. External CAN/RS485 uses IO13/IO14 and requires both the correct selector position and matching program.
 
 ### Synchronized servo example
 
@@ -55,7 +55,7 @@ Replies below are illustrative. Read HTTP replies through GET /api/result or rec
 | Operation | Send | Example reply |
 | --- | --- | --- |
 | Scan | `{"T":700,"first":0,"last":20,"rid":1}` | `{"T":700,"rid":1,"ok":true,"ids":[1,5],"first":0,"last":20}` |
-| Encoder | `{"T":732,"id":1,"rid":2}` | `{"T":732,"rid":2,"id":1,"ok":true,"bus_error":0,"device_status":0,"pos":2048,"speed":0}` |
+| Encoder | `{"T":732,"id":1,"rid":2}` | `{"T":732,"rid":2,"id":1,"ok":true,"bus_error":0,"reply_status":0,"pos":2048,"speed":0}` |
 | IMU unavailable | `{"T":740,"rid":3}` | `{"T":740,"rid":3,"ok":false,"present":false,"error":"imu_not_present"}` |
 
 `ok:false` indicates invalid parameters or device communication failure. `dispatched:true` means handler dispatch only, not verified motion. ID commands T=13/23/33/710/720 verify the new ID; encoders share T=720 with steppers.
@@ -66,6 +66,28 @@ Replies below are illustrative. Read HTTP replies through GET /api/result or rec
 | --- | --- |
 | GET /api/info | Firmware, baud rate, IMU, mission state, sta_state, sta_ip, ap_ip, sta_ssid; no passwords |
 | GET /api/result | Latest result only; match rid |
+| GET /api/imu | Latest onboard IMU snapshot; read-only, bypasses the command queue; fields below |
+
+## IMU feedback (T=740 / GET /api/imu)
+
+`GET /api/imu` returns a read-only snapshot without enqueueing a command. For a single command, send `{"T":740,"rid":1}`. A successful response is shaped as follows (example values):
+
+```json
+{"T":740,"rid":1,"ok":true,"present":true,"address":106,"sample_age_ms":2,"sample_count":123,"temperature_c":25.0,"accel_g":[0,0,1],"gyro_dps":[0,0,0]}
+```
+
+| Field | Meaning |
+| --- | --- |
+| `present` / `address` | Sensor detected / I2C address (decimal) |
+| `accel_g` / `gyro_dps` | X, Y, Z acceleration in g / angular velocity in degrees/s |
+| `temperature_c` | Sensor temperature in degrees C |
+| `sample_count` | Sensor's wrapping 24-bit counter; equal values are the same sample |
+| `sample_age_ms` | Age of the cached reading; -1 if unavailable |
+| `ok` / `error` | Use readings only when ok=true; stale readings (>100 ms) return imu_no_fresh_sample |
+
+Live requests should be sequential, approximately 10 per second or slower. No request history is stored. The web view estimates roll, pitch and relative heading; this six-axis sensor does not provide absolute heading.
+
+For T=723/732, reply_status combines the status flags from position and speed replies. For T=723, device_status is the actual driver register; device_fault, current_limited, limit_active and target_out_of_range remain available. Current limiting alone is not a fault.
 
 <!-- COMMAND_TABLES -->
 
