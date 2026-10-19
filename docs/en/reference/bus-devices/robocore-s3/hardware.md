@@ -2,6 +2,10 @@
 
 ## Package contents
 
+RoboCore S3 is available in two kits. Kit 1 includes the board and basic accessories listed below. Kit 2 adds User Interface Module (A) and its connecting cable to everything in Kit 1.
+
+### Kit 1
+
 | Item | Quantity | Purpose |
 | --- | --- | --- |
 | RoboCore S3 board | 1 | Robot control and device communication |
@@ -11,6 +15,17 @@
 | 2.4GHz bulkhead antenna | 1 | Panel mounting lets you position the antenna outside a metal robot enclosure for wireless communication |
 
 10A is the rating of the included XT30U cable; also respect the ratings of the supply, socket, connectors and connected devices.
+
+### Kit 2
+
+Includes **everything in Kit 1**, plus:
+
+| Item | Quantity | Purpose |
+| --- | --- | --- |
+| User Interface Module (A) | 1 | Includes a five-way switch, a 0.91-inch OLED display and a buzzer for local input, display and audible alerts |
+| User Interface Module (A) connecting cable | 1 | Connects RoboCore S3 to User Interface Module (A) |
+
+See [User Interface Module (A)](#user-interface-module-a) below for connection and usage details.
 
 !!! warning "Connect the external antenna before wireless use"
     Attach the antenna before using Wi-Fi or ESP-NOW. Operating without it degrades wireless communication and may cause the ESP32-S3 module to heat up. For a metal enclosure, use the bulkhead mounting to place the antenna outside.
@@ -65,7 +80,7 @@ The CAN example uses 500 kbps and needs a matching peer and common ground. The b
 
 ## User Interface Module (A)
 
-Connect this external module to PH1.25-10P for five buttons, buzzer alerts and OLED display. These components are on the module, not onboard RoboCore S3.
+Kit 2 includes this module and its connecting cable. Connect it to PH1.25-10P for a five-way switch, a 0.91-inch OLED display and buzzer alerts. These components are on the external module.
 
 | Function | GPIO / settings |
 | --- | --- |

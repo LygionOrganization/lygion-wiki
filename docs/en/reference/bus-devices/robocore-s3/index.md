@@ -19,6 +19,11 @@ See [power and connectors](hardware.md) before wiring.
 !!! danger "Bus power is not regulated down for each device"
     A 48V-rated controller does not make low-voltage servos compatible with 48V. Match the supply to every powered bus device.
 
+## Kit options
+
+- **Kit 1**: RoboCore S3 board and basic accessories. See [package contents](hardware.md#package-contents).
+- **Kit 2**: Everything in Kit 1, plus **User Interface Module (A)** (five-way switch, 0.91-inch OLED display and buzzer) and its connecting cable.
+
 ## Choose a path
 
 - No coding: [Quick start](quickstart.md), [Web console](web-console.md), [Bus devices](devices.md).
