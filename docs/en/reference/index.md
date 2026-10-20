@@ -6,12 +6,12 @@ Use this section after completing a [first communication test](../quickstart/ind
 
 | Product | Purpose | Documentation |
 | --- | --- | --- |
+| [RoboCore S3](bus-devices/robocore-s3/index.md) | ESP32-S3 controller for robot control, bus devices, web tools, and host communication | [Open guide](bus-devices/robocore-s3/index.md) |
 | TTL Adapter (A) | Converts USB or an MCU UART into a single-wire TTL bus interface | [Open guide](bus-devices/ttl-adapter-a/index.md) |
 | TTL Encoder E02 | 12-bit absolute magnetic angle encoder with TTL bus feedback | [Open guide](bus-devices/ttl-encoder-e02/index.md) |
 | TTL Stepper Driver (A) | TTL bus driver for bipolar stepper motors | [Open guide](bus-devices/ttl-stepper-driver-a/index.md) |
 | TTL Node (A) | S.BUS, RGB, PWM, USB, and TTL-bus multifunction node | [Open guide](bus-devices/ttl-node-a/index.md) |
 | TTL Bus Servos | Feetech TTL serial bus servos for joints, grippers, and pan-tilt mechanisms | [Open guide](bus-devices/bus-servos/index.md) |
-| Robot Driver with ESP32S3 Lite | ESP32S3-based robot controller with multiple robot interfaces | [Open guide](bus-devices/robot-driver-with-esp32s3-lite/index.md) |
 
 ## Bus Hubs
 

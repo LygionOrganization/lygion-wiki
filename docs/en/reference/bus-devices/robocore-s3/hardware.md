@@ -43,12 +43,64 @@ See [User Interface Module (A)](#user-interface-module-a) below for connection a
 
 ## Power
 
-RoboCore S3 accepts **5–48V** through the XT30 power contacts of the CAN 2+2 connector. The powered 5264-3P TTL and XH2.54-4P bus-device RS485 connectors carry this input voltage, without individual voltage conversion. USB alone does not supply actuator power.
+### Actuator supply and current
 
-!!! danger "Match the supply to every powered device"
-    A 48V-rated board does not make low-voltage servos compatible with 48V. Wire with power off and check polarity, pin assignments and device ratings. The GH1.25-5P 5V pin is an output: never apply motor supply voltage to it or tie it to another supply output.
+RoboCore S3 accepts **5–48V** through the XT30 power contacts of the CAN 2+2 connector. Select the voltage for the connected devices first, then check the combined current demand.
 
-GH1.25-3P provides board-to-board TTL communication and power decoupling.
+| Connector | Voltage / purpose | Continuous current limit |
+| --- | --- | --- |
+| XT30 power contacts | Input for the board and bus devices, 5–48V | 10A input |
+| 5264-3P TTL | Actuator output follows XT30 input voltage | 6A output |
+| XH2.54-4P device RS485 | Actuator output follows XT30 input voltage | 6A output |
+| GH1.25-3P | Board-to-board TTL communication and common ground for power decoupling | No actuator power supply |
+
+The TTL and device RS485 connectors **do not convert voltage for individual devices**. For example, a 24V XT30 input produces 24V actuator outputs. Both outputs and the board share the 10A input limit; they cannot both supply 6A simultaneously. Also respect the ratings of the supply, cables and adapter sockets.
+
+!!! warning "Match the supply to every powered device"
+    A 48V-rated board does not make low-voltage servos compatible with 48V. Wire with power off and check polarity, pin labels and device ratings. Include motor startup and stall current in the power budget.
+
+For independently powered device groups, use GH1.25-3P with a bus hub to decouple communication from actuator power. See [Power grouping and decoupling](../../../tutorials/power-grouping-and-decoupling.md).
+
+### Connecting USB and XT30 together
+
+USB and XT30 can be connected simultaneously. USB provides board communication, firmware download or board power; XT30 supplies actuator power. Board power does not backfeed into the computer through USB. **USB alone does not power the actuator connectors.**
+
+The two Type-C ports share VBUS inside the board; they are not isolated power inputs. Do not use two independent USB supplies as a parallel power arrangement.
+
+Board-only consumption is below 0.2W at standby and below 0.7W when running the Wi-Fi Web application. These figures exclude external devices and do not describe instantaneous peak consumption.
+
+### Auxiliary 5V and 3.3V
+
+These outputs serve low-power peripherals and are separate from the TTL / RS485 actuator outputs.
+
+| Output | Source | Usage limits |
+| --- | --- | --- |
+| GH1.25-5P 5V | SCT2A27 integrated LDO | 200mA-class supply; keep load at or below 200mA. Loaded voltage depends on LDO headroom |
+| Expansion 3.3V | AMS1117-3.3S supplied by 5V0 | 1A-class total output shared by the board and peripherals; available peripheral current is also thermally limited |
+
+**A 1A connector and PCB trace rating does not mean 1A is available to peripherals.** Reserve 3.3V current for the ESP32-S3, IMU, transceivers and other onboard loads. Use a separate regulator for larger loads, with a common ground as required by the communication interface. RoboCore S3 does not power a Raspberry Pi.
+
+Treat auxiliary 5V and 3.3V as outputs. Do not apply actuator supply voltage to them or directly parallel them with another device's power output.
+
+??? info "Circuit details: 5V0 and 5V are different nets"
+    U15 SCT2A27 generates **5V0** through its switching output and inductor L2. Its DC-DC supports 2A continuous output, but this is not the external auxiliary 5V connector rating.
+
+    - **Auxiliary 5V:** 5V0 feeds U15 VBIAS. The integrated 200mA LDO supplies GH1.25-5P through the LDO pin. Its input is already approximately 5V, leaving insufficient regulation headroom. Do not assume an exact 5V output at 200mA; check the peripheral's acceptable supply range.
+    - **3.3V:** U13 AMS1117-3.3S regulates 5V0 down to 3.3V. Dissipation is approximately `(5 − 3.3) × total output current`: 0.85W at 0.5A or 1.7W at 1A. Sustained capacity depends on board load, ambient temperature and cooling. Subtracting average board consumption from 1A does not establish a peripheral peak-current budget.
+
+    See the [SCT2A27 manufacturer datasheet](https://www.silicontent.com/uploads/20250604/3729c2375b93fd8db1c210f6d7f306ab.pdf). Chip ratings and current available to external peripherals are different quantities.
+
+### Protection scope
+
+| Circuit | Protection and limits |
+| --- | --- |
+| Board DC-DC branch | Current limiting, undervoltage, output overvoltage and thermal protection; these do not imply actuator-output protection |
+| USB | ESD protection on data lines; the power path blocks board power from feeding back into the computer |
+| CAN and device RS485 | Resettable fuses and transient clamps on signal lines |
+| External RS485 (GH1.25-5P) | Resettable fuses on signal lines |
+| Single-wire TTL | Resettable fuse and clamps on the signal line |
+
+The actuator power path has no overall reverse-polarity cutoff or overcurrent disconnect. Signal protection does not replace power protection; provide an external fuse or current-limited supply as required by the system. RESET and software stop commands do not disconnect actuator power.
 
 ## Connectors and resources
 
