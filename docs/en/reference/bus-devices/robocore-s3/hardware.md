@@ -6,6 +6,8 @@ RoboCore S3 is available in two kits. Kit 1 includes the board and basic accesso
 
 ### Kit 1
 
+![Kit 1: board, antenna, USB data cable and power accessories](../../../../reference/bus-devices/robocore-s3/assets/kit-1.webp){ .img-rounded width="720" loading="lazy" }
+
 | Item | Quantity | Purpose |
 | --- | --- | --- |
 | RoboCore S3 board | 1 | Robot control and device communication |
@@ -17,6 +19,8 @@ RoboCore S3 is available in two kits. Kit 1 includes the board and basic accesso
 10A is the rating of the included XT30U cable; also respect the ratings of the supply, socket, connectors and connected devices.
 
 ### Kit 2
+
+![Kit 2: all Kit 1 items plus the UI module and connecting cable](../../../../reference/bus-devices/robocore-s3/assets/kit-2.webp){ .img-rounded width="720" loading="lazy" }
 
 Includes **everything in Kit 1**, plus:
 
@@ -30,7 +34,15 @@ See [User Interface Module (A)](#user-interface-module-a) below for connection a
 !!! warning "Connect the external antenna before wireless use"
     Attach the antenna before using Wi-Fi or ESP-NOW. Operating without it degrades wireless communication and may cause the ESP32-S3 module to heat up. For a metal enclosure, use the bulkhead mounting to place the antenna outside.
 
+![Bulkhead antenna installation on a metal robot enclosure](../../../../reference/bus-devices/robocore-s3/assets/antenna-installation.webp){ .img-rounded width="720" loading="lazy" }
+
+Installation example; the robot and enclosure are not included in either kit. The photo illustrates antenna placement, not an internal wiring diagram.
+
 ## Dimensions and mounting
+
+![RoboCore S3 outline and mounting-hole dimensions in mm](../../../../reference/bus-devices/robocore-s3/assets/dimensions.webp){ .img-rounded width="720" loading="lazy" }
+
+Dimensions are in mm. Use the four mounting holes and leave clearance for connectors, cables and the antenna.
 
 | Item | Specification |
 | --- | --- |
@@ -41,25 +53,39 @@ See [User Interface Module (A)](#user-interface-module-a) below for connection a
 | Controller module | ESP32-S3-WROOM-1U-MCR8N8; 8 MB flash, 8 MB PSRAM |
 | Development | Open-source examples for PlatformIO and Arduino IDE |
 
+![RoboCore S3 rear side and four mounting holes](../../../../reference/bus-devices/robocore-s3/assets/board-back.webp){ .img-rounded width="600" loading="lazy" }
+
 ## Power
 
 ### Actuator supply and current
 
-RoboCore S3 accepts **5–48V** through the XT30 power contacts of the CAN 2+2 connector. Select the voltage for the connected devices first, then check the combined current demand.
+RoboCore S3 accepts **5–48V** through the XT30 power contacts of the CAN 2+2 connector, the 5264-3P TTL connector, or the XH2.54-4P device RS485 connector. Select the voltage for the connected devices first, then check the combined current demand.
 
 | Connector | Voltage / purpose | Continuous current limit |
 | --- | --- | --- |
 | XT30 power contacts | Input for the board and bus devices, 5–48V | 10A input |
-| 5264-3P TTL | Actuator output follows XT30 input voltage | 6A output |
-| XH2.54-4P device RS485 | Actuator output follows XT30 input voltage | 6A output |
+| 5264-3P TTL | Supports power input; actuator voltage follows the system supply | 6A output |
+| XH2.54-4P device RS485 | Supports power input; actuator voltage follows the system supply | 6A output |
 | GH1.25-3P | Board-to-board TTL communication and common ground for power decoupling | No actuator power supply |
 
-The TTL and device RS485 connectors **do not convert voltage for individual devices**. For example, a 24V XT30 input produces 24V actuator outputs. Both outputs and the board share the 10A input limit; they cannot both supply 6A simultaneously. Also respect the ratings of the supply, cables and adapter sockets.
+The TTL and device RS485 connectors **do not convert voltage for individual devices**. For example, a 24V XT30 input produces 24V actuator outputs. When powered through XT30, both outputs and the board share its 10A input limit; they cannot both supply 6A simultaneously. Also respect the ratings of the supply, cables and adapter sockets.
 
 !!! warning "Match the supply to every powered device"
     A 48V-rated board does not make low-voltage servos compatible with 48V. Wire with power off and check polarity, pin labels and device ratings. Include motor startup and stall current in the power budget.
 
 For independently powered device groups, use GH1.25-3P with a bus hub to decouple communication from actuator power. See [Power grouping and decoupling](../../../tutorials/power-grouping-and-decoupling.md).
+
+### Flexible power connections { #flexible-power }
+
+![A hub powers RoboCore S3 and carries TTL communication through one 5264-3P cable](../../../../reference/bus-devices/robocore-s3/assets/simple_power.webp){ .img-rounded width="720" loading="lazy" }
+
+Connect the supply to a compatible bus hub, then link the hub to RoboCore S3 with **one 5264-3P cable** for both board power and TTL communication. The hub supplies the actuators directly, so their high current does not pass through RoboCore S3. This suits higher-power systems and reduces wiring around the controller. The XH2.54-4P device RS485 connector also accepts power input; choose the connection for your device bus.
+
+- Stay within the board's **5–48V** input range and the rated voltage of the hub and every device sharing the supply.
+- Respect supply, hub, connector and cable current ratings. The 6A values above are bus-port output limits, not a rating for every wiring arrangement.
+- The XT30, 5264-3P and XH2.54-4P actuator power contacts share a supply rail. Do not directly parallel independent supplies.
+
+This differs from **GH1.25-3P power grouping**: 5264-3P carries both power and communication, while GH1.25-3P carries only TTL communication and common ground, with the board and actuator groups powered separately. The hub, drivers, motors and external supply are sold separately.
 
 ### Connecting USB and XT30 together
 
@@ -104,20 +130,28 @@ The actuator power path has no overall reverse-polarity cutoff or overcurrent di
 
 ## Connectors and resources
 
-| Resource | Signals | Use |
-| --- | --- | --- |
-| Type-C UART | TXD0 / RXD0 via USB-to-UART | Firmware download and debugging, with automatic download circuit |
-| Type-C USB | IO19 USB D−, IO20 USB D+ | Native ESP32-S3 USB, including host USB CDC communication |
-| 5264-3P | IO4 TX / IO5 RX via single-wire TTL circuit | TTL bus devices; power follows XT30 input |
-| XH2.54-4P | IO4 TX / IO5 RX via RS485 circuit | RS485 bus devices; power follows XT30 input |
-| GH1.25-3P | Single-wire TTL | Board-to-board TTL communication and power decoupling |
-| PH1.25-10P expansion | IO6 SDA, IO7 SCL, IO2, IO9, IO10, IO11, IO12, IO21, 3.3V, GND | Lygion User Interface Module (A) |
-| CAN/RS485 selector | IO13 RX / IO14 TX | Select the external communication circuit |
-| CAN 2+2 | CAN H/L and XT30 power contacts | Board power input; CAN communication on RX13/TX14 in CAN position |
-| GH1.25-5P | RS485 A/B, GND, 5V output | External RS485 on RX13/TX14 in 485 position |
-| QMI8658A six-axis onboard IMU | IO6 SDA / IO7 SCL | Three-axis acceleration and angular velocity; shares I²C with external OLED |
-| BOOT button | IO0, active low | Enter download mode together with RESET |
-| RESET button | EN, active low | Holds the MCU in reset while pressed; restarts on release, without disconnecting board power |
+Board front, with both Type-C ports facing down. Numbers match the table below. Open the image to inspect the connector labels. The IMU is listed separately without a front-view number.
+
+![RoboCore S3 onboard resources, with 13 numbers matching the table](../../../../reference/bus-devices/robocore-s3/assets/board-resources.svg){ .img-rounded width="720" loading="lazy" }
+
+[Open the full-size numbered diagram](../../../../reference/bus-devices/robocore-s3/assets/board-resources.svg)
+
+| No. | Resource | Signals | Use |
+| --- | --- | --- | --- |
+| 01 | ESP32-S3 controller | ESP32-S3-WROOM-1U-MCR8N8 | 8 MB flash / 8 MB PSRAM; control firmware and wireless communication |
+| 02 | IPEX1 antenna connector | External 2.4 GHz antenna | Connect the antenna before Wi-Fi or ESP-NOW use |
+| 03 | PH1.25-10P expansion | IO6 SDA, IO7 SCL, IO2, IO9, IO10, IO11, IO12, IO21, 3.3V, GND | Lygion User Interface Module (A) |
+| 04 | CAN 2+2 | CAN H/L and XT30 power contacts | Board power input; CAN communication on RX13/TX14 in CAN position |
+| 05 | CAN/RS485 selector | IO13 RX / IO14 TX | Select the external communication circuit |
+| 06 | GH1.25-5P | RS485 A/B, GND, 5V output | External RS485 on RX13/TX14 in 485 position |
+| 07 | 5264-3P | IO4 TX / IO5 RX via single-wire TTL circuit | TTL bus devices; supports power input; power follows the system supply |
+| 08 | XH2.54-4P | IO4 TX / IO5 RX via RS485 circuit | RS485 bus devices; supports power input; power follows the system supply |
+| 09 | GH1.25-3P | Single-wire TTL | Board-to-board TTL communication and power decoupling |
+| 10 | Type-C USB | IO19 USB D−, IO20 USB D+ | Native ESP32-S3 USB, including host USB CDC communication |
+| 11 | Type-C UART | TXD0 / RXD0 via USB-to-UART | Firmware download and debugging, with automatic download circuit |
+| 12 | BOOT button | IO0, active low | Enter download mode together with RESET |
+| 13 | RESET button | EN, active low | Holds the MCU in reset while pressed; restarts on release, without disconnecting board power |
+| — | QMI8658A six-axis onboard IMU | IO6 SDA / IO7 SCL | Three-axis acceleration and angular velocity; shares I²C with external OLED |
 
 ## CAN/RS485 selector
 
@@ -131,6 +165,8 @@ External RS485 on IO13/IO14 is independent of bus-device RS485 on IO4/IO5. **Bus
 The CAN example uses 500 kbps and needs a matching peer and common ground. The board has a 120Ω CAN termination resistor; account for existing termination across the entire network. The external RS485 example uses 115200 8N1 and automatic hardware direction control. Coordinate half-duplex access between peers. See [Arduino examples](arduino.md). Switching to 485 does not automatically create a factory JSON gateway.
 
 ## User Interface Module (A)
+
+![Connected external UI module with OLED, five-way switch and buzzer](../../../../reference/bus-devices/robocore-s3/assets/ui-module-connected.webp){ .img-rounded width="720" loading="lazy" }
 
 Kit 2 includes this module and its connecting cable. Connect it to PH1.25-10P for a five-way switch, a 0.91-inch OLED display and buzzer alerts. These components are on the external module.
 

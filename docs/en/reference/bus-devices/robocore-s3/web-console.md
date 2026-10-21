@@ -16,6 +16,14 @@ All pages are embedded in the firmware, with no internet or CDN requirement. Use
 | JSON tools | Commands, result log, complete command reference and mission scripts |
 | Settings | Wi-Fi, controller baud and firmware information |
 
+## Tablet and phone views
+
+The same embedded Web application works in a tablet or phone browser. These are photos of the real interface; the tablet, phone and demonstration devices are not included.
+
+![English Web controls on a tablet](../../../../reference/bus-devices/robocore-s3/assets/web-tablet-en.webp){ .img-rounded width="720" loading="lazy" }
+
+![English Web controls on a phone](../../../../reference/bus-devices/robocore-s3/assets/web-mobile-en.webp){ .img-rounded width="720" loading="lazy" }
+
 ## Onboard IMU
 
 Read once retrieves a current measurement. Enable live display to update the readings and 3D model as the board moves. You can pause the display or set the current heading as the reference. Leaving the page or hiding the tab pauses updates. Heading is estimated from six-axis data and drifts over time; it is not an absolute compass direction.

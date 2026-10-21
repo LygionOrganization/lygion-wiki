@@ -128,7 +128,7 @@ plugins:
                     - RoboCore S3:
                         - reference/bus-devices/robocore-s3/index.md
                         - 快速开始: reference/bus-devices/robocore-s3/quickstart.md
-                        - 供电与接口: reference/bus-devices/robocore-s3/hardware.md
+                        - 供电、接口与板载资源: reference/bus-devices/robocore-s3/hardware.md
                         - 网页控制台: reference/bus-devices/robocore-s3/web-console.md
                         - 总线设备控制: reference/bus-devices/robocore-s3/devices.md
                         - JSON 接口: reference/bus-devices/robocore-s3/json-api.md
@@ -309,7 +309,7 @@ plugins:
                     - RoboCore S3:
                         - reference/bus-devices/robocore-s3/index.md
                         - Quick Start: reference/bus-devices/robocore-s3/quickstart.md
-                        - Power and Wiring: reference/bus-devices/robocore-s3/hardware.md
+                        - Power and Board Resources: reference/bus-devices/robocore-s3/hardware.md
                         - Web Console: reference/bus-devices/robocore-s3/web-console.md
                         - Bus Devices: reference/bus-devices/robocore-s3/devices.md
                         - JSON API: reference/bus-devices/robocore-s3/json-api.md

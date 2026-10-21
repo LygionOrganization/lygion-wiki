@@ -2,13 +2,15 @@
 
 RoboCore S3 is an ESP32-S3 robot controller. Its factory firmware lets you discover bus IDs, control servos and steppers, configure TTL Node modules and read encoders from a phone or desktop browser without writing code.
 
+![RoboCore S3 board with its included external antenna](../../../../reference/bus-devices/robocore-s3/assets/hero-board-antenna.webp){ .img-rounded width="600" loading="lazy" }
+
 ## Product specifications
 
 | Item | RoboCore S3 |
 | --- | --- |
 | Size / mounting | 47 × 52 mm; four Ø3 mm holes, 40 × 45 mm center spacing |
 | Controller | ESP32-S3, 8 MB flash and 8 MB PSRAM |
-| Input power | 5–48V through XT30; powered bus outputs follow input |
+| Input power | 5–48V through XT30 / 5264-3P / XH2.54-4P; powered bus outputs follow input |
 | Device bus | Single-wire TTL and bus-device RS485, sharing IO4 TX / IO5 RX |
 | External communication | CAN or RS485 selected by switch, sharing IO13 RX / IO14 TX |
 | Sensing / expansion | Onboard QMI8658A; external User Interface Module (A) support |

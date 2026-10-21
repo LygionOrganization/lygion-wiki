@@ -2,13 +2,15 @@
 
 RoboCore S3 是面向机器人下位机的 ESP32-S3 主控板。出厂安装完整控制固件，无需编程，即可用手机或电脑网页扫描总线 ID、控制舵机与步进电机、设置 TTL Node 和读取编码器。
 
+![RoboCore S3 主板与随附外部天线](assets/hero-board-antenna.webp){ .img-rounded width="600" loading="lazy" }
+
 ## 产品参数
 
 | 项目 | RoboCore S3 |
 | --- | --- |
 | 尺寸与安装 | 47 × 52 mm；4 个直径 3 mm 装配孔，孔中心间距 40 × 45 mm |
 | 主控 | ESP32-S3，8 MB Flash、8 MB PSRAM |
-| 输入电源 | XT30 输入 5–48V；带电源总线口电压跟随输入 |
+| 输入电源 | XT30 / 5264-3P / XH2.54-4P 输入 5–48V；带电源总线口电压跟随输入 |
 | 设备总线 | 单线 TTL 与总线设备 RS485，共用 IO4 TX / IO5 RX |
 | 外部通信 | 开关选择 CAN 或 RS485，共用 IO13 RX / IO14 TX |
 | 感知与扩展 | 板载 QMI8658A，支持外接 User Interface Module (A) |

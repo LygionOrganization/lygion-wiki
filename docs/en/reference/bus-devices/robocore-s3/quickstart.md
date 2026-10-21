@@ -8,11 +8,19 @@ Prepare a RoboCore S3, a data-capable USB cable, a phone or computer, and one bu
 
 Wire with power removed. Follow the board labels for supply polarity, GND and TTL. USB communication does not mean the external actuator has motor power. Powered bus connectors carry the board input voltage.
 
+![RoboCore S3 connected to bus devices, power wiring and antenna](../../../../reference/bus-devices/robocore-s3/assets/first-connection.webp){ .img-rounded width="720" loading="lazy" }
+
+Bus-device wiring example; devices and an external power supply are required separately. This multi-device photo illustrates connections: for the first test, connect only one device as described above. Choose the supply voltage for that device.
+
 ## Join the network
 
 The factory AP is `Robot`, password `12345678`. Stay connected when your phone reports “no Internet”; prevent automatic switching to cellular data. Enter `http://192.168.4.1` directly in the browser address bar.
 
 If network settings were changed, use the current SSID and address. The OLED or router client list can help locate the board.
+
+![RoboCore S3 English Web application on a tablet](../../../../reference/bus-devices/robocore-s3/assets/web-tablet-en.webp){ .img-rounded width="720" loading="lazy" }
+
+Tablet and demonstration devices are not included. See [Web console](web-console.md) for page functions.
 
 ## Scan bus IDs
 

@@ -6,6 +6,8 @@ RoboCore S3 提供两种套装：套装一包含下列主板与基础配件；�
 
 ### 套装一
 
+![套装一：主板、天线、USB 数据线与电源配件](assets/kit-1.webp){ .img-rounded width="720" loading="lazy" }
+
 | 配件 | 数量 | 用途 |
 | --- | --- | --- |
 | RoboCore S3 主板 | 1 | 机器人控制与设备通信 |
@@ -17,6 +19,8 @@ RoboCore S3 提供两种套装：套装一包含下列主板与基础配件；�
 10A 为随附 XT30U 配线的额定能力；实际供电还应符合电源、插头插座及连接设备的额定值。
 
 ### 套装二
+
+![套装二：套装一全部物品，另加 UI 模块与配线](assets/kit-2.webp){ .img-rounded width="720" loading="lazy" }
 
 包含**套装一的全部物品**，并增加：
 
@@ -30,7 +34,15 @@ RoboCore S3 提供两种套装：套装一包含下列主板与基础配件；�
 !!! warning "使用无线功能前连接外部天线"
     使用 Wi-Fi 或 ESP-NOW 前先接好外部天线。未连接天线会影响无线通信，并可能导致 ESP32-S3 模组发热。安装在金属外壳内时，可使用穿板安装把天线置于外壳外侧。
 
+![金属机器人外壳上的穿板天线安装示例](assets/antenna-installation.webp){ .img-rounded width="720" loading="lazy" }
+
+穿板安装应用示例；机器人与金属外壳不属于套装。此图用于展示天线布置，不作为内部接线图。
+
 ## 尺寸与安装
+
+![RoboCore S3 外形与安装孔尺寸图，单位 mm](assets/dimensions.webp){ .img-rounded width="720" loading="lazy" }
+
+图中尺寸单位为 mm。安装时使用四个装配孔，并为插头、线缆与天线预留空间。
 
 | 项目 | 参数 |
 | --- | --- |
@@ -41,25 +53,39 @@ RoboCore S3 提供两种套装：套装一包含下列主板与基础配件；�
 | 主控模组 | ESP32-S3-WROOM-1U-MCR8N8，8 MB Flash、8 MB PSRAM |
 | 开发方式 | 开源例程，支持 PlatformIO 与 Arduino IDE |
 
+![RoboCore S3 主板背面与四个安装孔](assets/board-back.webp){ .img-rounded width="600" loading="lazy" }
+
 ## 供电
 
 ### 动力电源与电流
 
-RoboCore S3 支持 **5–48V 输入**，通过 CAN 2+2 接口的 XT30 电源端供电。先按所连接设备的额定电压选择电源，再检查总电流需求。
+RoboCore S3 支持 **5–48V 输入**，可通过 CAN 2+2 接口的 XT30 电源端、5264-3P TTL 或 XH2.54-4P 设备 RS485 接口供电。先按所连接设备的额定电压选择电源，再检查总电流需求。
 
 | 接口 | 电压 / 用途 | 持续电流上限 |
 | --- | --- | --- |
 | XT30 电源端 | 主板及总线设备的动力输入，5–48V | 10A 输入 |
-| 5264-3P TTL | 动力输出跟随 XT30 输入电压 | 6A 输出 |
-| XH2.54-4P 设备 RS485 | 动力输出跟随 XT30 输入电压 | 6A 输出 |
+| 5264-3P TTL | 支持供电输入；动力电压跟随系统电源 | 6A 输出 |
+| XH2.54-4P 设备 RS485 | 支持供电输入；动力电压跟随系统电源 | 6A 输出 |
 | GH1.25-3P | 板间 TTL 通信与共地，用于供电解耦 | 不提供动力供电 |
 
-TTL 和设备 RS485 接口**不会为设备单独降压**。例如，XT30 输入 24V 时，这两个接口的动力输出也为 24V。两路输出及主板自身用电共同受 XT30 的 10A 输入上限约束，不能同时按 6A 满载使用；电源、线缆、转接插座的额定电流也应满足需求。
+TTL 和设备 RS485 接口**不会为设备单独降压**。例如，XT30 输入 24V 时，这两个接口的动力输出也为 24V。通过 XT30 供电时，两路输出及主板自身用电共同受 XT30 的 10A 输入上限约束，不能同时按 6A 满载使用；电源、线缆、转接插座的额定电流也应满足需求。
 
 !!! warning "按所有共电设备的额定电压选择电源"
     主板支持 48V 不代表低压舵机也能接 48V。断电接线，按板上端子标识核对正负极、线序和设备额定电压。电机启动、堵转时的电流也应计入供电预算。
 
 多组设备需要独立供电时，可通过 GH1.25-3P 连接总线 Hub，实现通信与动力供电解耦。参见[供电分组与解耦](../../../tutorials/power-grouping-and-decoupling.md)。
+
+### 灵活的供电方式 { #flexible-power }
+
+![Hub 经一根 5264-3P 连接线为 RoboCore S3 供电并通信](assets/simple_power.webp){ .img-rounded width="720" loading="lazy" }
+
+将电源接入匹配的总线 Hub，再用一根 **5264-3P 连接线**连接 Hub 和 RoboCore S3，即可同时实现主板供电与 TTL 通信。执行器从 Hub 获取动力电，大电流无需经过 RoboCore S3，适合大功率系统，也能减少主板周边的电源走线。XH2.54-4P 设备 RS485 接口同样支持供电输入，可按设备总线类型选择连接方式。
+
+- 供电电压须在主板的 **5–48V** 范围内，并符合 Hub 和所有共电设备的额定电压。
+- 按电源、Hub、接口和线缆的额定电流配置负载；上表的 6A 为总线口的输出上限，不代表任意接法均可承载该电流。
+- XT30、5264-3P 和 XH2.54-4P 的动力端共用电源，不要直接并联独立电源。
+
+此接法与 **GH1.25-3P 分组供电**不同：5264-3P 同时传输动力电与通信；GH1.25-3P 只连接 TTL 通信与共地，主板和执行器组分别供电。Hub、驱动器、电机及外接电源需另备。
 
 ### USB 与 XT30 同时连接
 
@@ -104,20 +130,28 @@ TTL 和设备 RS485 接口**不会为设备单独降压**。例如，XT30 输入
 
 ## 板载接口与资源
 
-| 接口 / 资源 | 信号 | 用法 |
-| --- | --- | --- |
-| Type-C UART | TXD0 / RXD0，经 USB 转串口 | 程序下载、串口调试；带自动下载电路 |
-| Type-C USB | IO19 USB D−、IO20 USB D+ | ESP32-S3 原生 USB；用于 USB CDC 上位机通信，减少串口桥接瓶颈 |
-| 5264-3P | IO4 TX、IO5 RX，经单线 TTL 电路 | 单线 TTL 总线设备；动力供电等于 XT30 输入 |
-| XH2.54-4P | IO4 TX、IO5 RX，经 RS485 电路 | RS485 总线设备；动力供电等于 XT30 输入 |
-| GH1.25-3P | 单线 TTL | 板间 TTL 通信、供电解耦 |
-| PH1.25-10P 扩展口 | IO6 SDA、IO7 SCL、IO2、IO9、IO10、IO11、IO12、IO21，3.3V、GND | 连接 Lygion User Interface Module (A) |
-| CAN/RS485 选择开关 | IO13 RX、IO14 TX | 选择外部通信的 CAN 或 RS485 物理通路 |
-| CAN 2+2 | CAN H/L，XT30 电源端 | 为主板供电；CAN 档时使用 IO13 RX、IO14 TX 通信 |
-| GH1.25-5P | RS485 A/B、GND、5V 输出 | 485 档时使用 IO13 RX、IO14 TX 通信 |
-| QMI8658A 六轴板载 IMU | IO6 SDA、IO7 SCL | 三轴加速度、三轴角速度；与外接 OLED 共用 I²C |
-| BOOT 按键 | IO0，按下为低 | 配合 RESET 手动进入下载模式 |
-| RESET 按键 | EN，按下为低 | 按住时主控保持复位，松开后重新启动；不是整板电源断开开关 |
+观察方向：主板正面朝上，两个 Type-C 接口朝下。图中编号与下表对应，可打开原图查看接口丝印。IMU 单独列出，不标注正面位置。
+
+![RoboCore S3 板载资源编号图，13 项编号对应下表](assets/board-resources.svg){ .img-rounded width="720" loading="lazy" }
+
+[查看完整板载资源编号图](assets/board-resources.svg)
+
+| 编号 | 接口 / 资源 | 信号 | 用法 |
+| --- | --- | --- | --- |
+| 01 | ESP32-S3 主控模组 | ESP32-S3-WROOM-1U-MCR8N8 | 8 MB Flash / 8 MB PSRAM；运行控制固件与无线通信 |
+| 02 | IPEX1 天线接口 | 2.4 GHz 外接天线 | 使用 Wi-Fi 或 ESP-NOW 前先连接天线 |
+| 03 | PH1.25-10P 扩展口 | IO6 SDA、IO7 SCL、IO2、IO9、IO10、IO11、IO12、IO21，3.3V、GND | 连接 Lygion User Interface Module (A) |
+| 04 | CAN 2+2 | CAN H/L，XT30 电源端 | 为主板供电；CAN 档时使用 IO13 RX、IO14 TX 通信 |
+| 05 | CAN/RS485 选择开关 | IO13 RX、IO14 TX | 选择外部通信的 CAN 或 RS485 物理通路 |
+| 06 | GH1.25-5P | RS485 A/B、GND、5V 输出 | 485 档时使用 IO13 RX、IO14 TX 通信 |
+| 07 | 5264-3P | IO4 TX、IO5 RX，经单线 TTL 电路 | 单线 TTL 总线设备；动力供电等于 XT30 输入 |
+| 08 | XH2.54-4P | IO4 TX、IO5 RX，经 RS485 电路 | RS485 总线设备；动力供电等于 XT30 输入 |
+| 09 | GH1.25-3P | 单线 TTL | 板间 TTL 通信、供电解耦 |
+| 10 | Type-C USB | IO19 USB D−、IO20 USB D+ | ESP32-S3 原生 USB；用于 USB CDC 上位机通信，减少串口桥接瓶颈 |
+| 11 | Type-C UART | TXD0 / RXD0，经 USB 转串口 | 程序下载、串口调试；带自动下载电路 |
+| 12 | BOOT 按键 | IO0，按下为低 | 配合 RESET 手动进入下载模式 |
+| 13 | RESET 按键 | EN，按下为低 | 按住时主控保持复位，松开后重新启动；不是整板电源断开开关 |
+| — | QMI8658A 六轴板载 IMU | IO6 SDA、IO7 SCL | 三轴加速度、三轴角速度；与外接 OLED 共用 I²C |
 
 ## CAN/RS485 开关注意事项
 
@@ -131,6 +165,8 @@ TTL 和设备 RS485 接口**不会为设备单独降压**。例如，XT30 输入
 CAN 例程为 500 kbps，需要匹配波特率的对端和共地。板上有 120Ω CAN 终端电阻，组网时需考虑各节点已有终端，避免每个节点都叠加终端。外部 RS485 例程为 115200、8N1，板上自动控制收发方向；双方应协调半双工发送。详见 [Arduino 例程](arduino.md)。出厂 JSON 接口与单元通信例程的协议不同，不应假设将开关拨到 485 就会自动出现 JSON 网关。
 
 ## User Interface Module (A)
+
+![外接 UI 模块连接实拍：OLED、五向按键与蜂鸣器](assets/ui-module-connected.webp){ .img-rounded width="720" loading="lazy" }
 
 套装二随附此模块及配套连接线。通过 PH1.25-10P 扩展口连接，提供五向开关按键、0.91 寸 OLED 屏幕和蜂鸣器提醒。这些器件位于外接模块上。
 
