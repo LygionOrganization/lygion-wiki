@@ -42,6 +42,8 @@ Installation example; the robot and enclosure are not included in either kit. Th
 
 ![RoboCore S3 outline and mounting-hole dimensions in mm](../../../../reference/bus-devices/robocore-s3/assets/dimensions.webp){ .img-rounded width="720" loading="lazy" }
 
+[Download STEP model](../../../../reference/bus-devices/robocore-s3/assets/RoboCore_S3.step){ .md-button download="RoboCore_S3.step" }
+
 Dimensions are in mm. Use the four mounting holes and leave clearance for connectors, cables and the antenna.
 
 | Item | Specification |

@@ -36,4 +36,6 @@ RoboCore S3 是面向机器人下位机的 ESP32-S3 主控板。出厂安装完�
 [开始使用](quickstart.md){ .md-button .md-button--primary }
 [下载例程包](../../../assets/files/robocore-s3/examples.zip){ .md-button }
 
+[下载 STEP 三维模型](assets/RoboCore_S3.step){ .md-button download="RoboCore_S3.step" }
+
 源码：[完整固件](https://github.com/LygionOrganization/robocore_s3) · [TTL SDK](https://github.com/LygionOrganization/lygion_devs_cpp) · [Wiki](https://github.com/LygionOrganization/lygion-wiki)

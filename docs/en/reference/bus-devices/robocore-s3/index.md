@@ -36,4 +36,6 @@ See [power and connectors](hardware.md) before wiring.
 [Get started](quickstart.md){ .md-button .md-button--primary }
 [Example download](../../../assets/files/robocore-s3/examples.zip){ .md-button }
 
+[Download STEP model](../../../../reference/bus-devices/robocore-s3/assets/RoboCore_S3.step){ .md-button download="RoboCore_S3.step" }
+
 Sources: [firmware](https://github.com/LygionOrganization/robocore_s3), [TTL SDK](https://github.com/LygionOrganization/lygion_devs_cpp), [wiki](https://github.com/LygionOrganization/lygion-wiki).

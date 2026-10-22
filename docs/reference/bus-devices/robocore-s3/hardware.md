@@ -42,6 +42,8 @@ RoboCore S3 提供两种套装：套装一包含下列主板与基础配件；�
 
 ![RoboCore S3 外形与安装孔尺寸图，单位 mm](assets/dimensions.webp){ .img-rounded width="720" loading="lazy" }
 
+[下载 STEP 三维模型](assets/RoboCore_S3.step){ .md-button download="RoboCore_S3.step" }
+
 图中尺寸单位为 mm。安装时使用四个装配孔，并为插头、线缆与天线预留空间。
 
 | 项目 | 参数 |
