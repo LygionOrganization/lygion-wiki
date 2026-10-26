@@ -65,6 +65,16 @@ For a three-wheel base, choose the power supply based on motor current, load, an
 | [Python Development](python-development.md) | Python SDK setup, startup sync, angle control, and wheel speed control |
 | [ESP32 Arduino Development](cpp-arduino.md) | ESP32 wiring, Arduino SDK calls, angle conversion, and complete example flow |
 
+## Mounting Dimensions
+
+| Item | Specification |
+| --- | --- |
+| Drive wheel diameter | Φ69 mm |
+| Main mounting hole spacing | 108 × 40 mm |
+| Mounting holes | 10 × M6 |
+
+The mounting hole count in the PDF and DXF drawings has been corrected to `10 × M6`. Use the STEP model below to check mounting positions during mechanical design.
+
 ## Downloads
 
 | Resource | File |
