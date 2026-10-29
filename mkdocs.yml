@@ -192,6 +192,16 @@ plugins:
                     - 关节执行器 DM42-G7220-E02: reference/modules/dm42-g7220-e02/index.md
                 - 机器人整机:
                     - reference/robots/index.md
+                    - Lyo-D42:
+                        - reference/robots/lyo-d42/index.md
+                        - 快速开始与网页控制: reference/robots/lyo-d42/quickstart.md
+                        - 硬件与供电: reference/robots/lyo-d42/hardware.md
+                        - JSON / CAN 协议: reference/robots/lyo-d42/api.md
+                        - 上位机开发: reference/robots/lyo-d42/host.md
+                        - USB CDC 与 UART: reference/robots/lyo-d42/usb-cdc.md
+                        - CAN 总线通信: reference/robots/lyo-d42/can.md
+                        - 进阶二次开发: reference/robots/lyo-d42/development.md
+                        - 故障排查: reference/robots/lyo-d42/faq.md
                     - LinkArm-M:
                         - reference/robots/linkarm-m/index.md
                         - 快速开始: reference/robots/linkarm-m/quickstart.md
@@ -364,6 +374,16 @@ plugins:
                     - DM42-G7220-E02 Joint Actuator: reference/modules/dm42-g7220-e02/index.md
                 - Robots:
                     - reference/robots/index.md
+                    - Lyo-D42:
+                        - reference/robots/lyo-d42/index.md
+                        - Quick Start: reference/robots/lyo-d42/quickstart.md
+                        - Hardware: reference/robots/lyo-d42/hardware.md
+                        - JSON / CAN API: reference/robots/lyo-d42/api.md
+                        - Host SDKs: reference/robots/lyo-d42/host.md
+                        - USB CDC / UART: reference/robots/lyo-d42/usb-cdc.md
+                        - CAN Communication: reference/robots/lyo-d42/can.md
+                        - Development: reference/robots/lyo-d42/development.md
+                        - Troubleshooting: reference/robots/lyo-d42/faq.md
                     - LinkArm-M:
                         - reference/robots/linkarm-m/index.md
                         - Quick Start: reference/robots/linkarm-m/quickstart.md

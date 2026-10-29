@@ -6,6 +6,7 @@
 
 | 产品 | 定位 | 推荐入口 |
 | --- | --- | --- |
+| Lyo-D42 | ESP32-S3 双驱移动底盘，网页直接驾驶、驻坡、JSON / CAN 与二次开发。 | [查看文档](lyo-d42/index.md) |
 | LinkArm-M | 基于 Python SDK 和 CLI 控制的机械臂，适合脚本控制、教学实验和上层 AI 集成。 | [查看文档](linkarm-m/index.md) |
 | LinkArm-LT | 包含 ESP32-S3 下位机，带 Web 控制台、动作脚本、JSON 指令和无线示教功能的机械臂平台。 | [查看文档](linkarm-lt/index.md) |
 
